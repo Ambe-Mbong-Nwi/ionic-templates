@@ -1,0 +1,231 @@
+<ion-header style="z-index: 9;">
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                <div class="location">
+                    <h2><img src="assets/images/Handyzone/ic_location.png">&nbsp;&nbsp;{{'home' | translate}}</h2>
+                </div>
+
+                <div class="img_section end" (click)="account()">
+                    <div class="img_box center_img ">
+                        <img src="assets/images/Handyzone/profile_pic.png" class="crop_img">
+                    </div>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <!-- <div *ngIf="config.demoMode" (click)="buyappalert()" class="buy_this_app">
+        <h2>
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div> -->
+</ion-header>
+
+<ion-content fullscreen>
+    <div [ngClass]="showClassInAnimation?'new_popular_services_active':'new_popular_services'">
+        <div class="banner">
+            <div class="logo">
+                <img src="assets/images/Handyzone/logo_text.png">
+            </div>
+            <div class="banner_img">
+                <img src="assets/images/Handyzone/sign_img.png">
+            </div>
+            <div class="search_box d-flex animate__animated animate__zoomIn" (click)="search()">
+                <img src="assets/images/Handyzone/ic_search.png">&nbsp;&nbsp;&nbsp;
+                <h2>{{'search_service' | translate}}</h2>
+            </div>
+        </div>
+        <div class="popular_services">
+            <h1>{{'popular_services' | translate}}</h1>
+
+            <ion-row>
+                <ion-col id="one" (click)="animations('one')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Home Clean</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service1.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one1" (click)="animations('one1')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Electrician</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service2.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one2" (click)="animations('one2')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Gardening</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service3.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one3" (click)="animations('one3')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Carpenter</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service4.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one4" (click)="animations('one4')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Painter</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service5.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one5" (click)="animations('one5')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Plumber</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service6.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one6" (click)="animations('one6')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Movers</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service7.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one7" (click)="animations('one7')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Hair & Beauty</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service8.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one8" (click)="animations('one8')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Home Sanitize</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service9.png">
+                        </div>
+                    </div>
+                </ion-col>
+                <ion-col id="one9" (click)="animations('one9')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Home Clean</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service1.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one10" (click)="animations('one10')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Electrician</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service2.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one11" (click)="animations('one11')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Gardening</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service3.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one12" (click)="animations('one12')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Carpenter</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service4.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one13" (click)="animations('one13')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Painter</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service5.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one14" (click)="animations('one14')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Plumber</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service6.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one15" (click)="animations('one15')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Movers</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service7.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one17" (click)="animations('one17')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Hair & Beauty</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service8.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one16" (click)="animations('one16')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Home Sanitize</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service9.png">
+                        </div>
+                    </div>
+                </ion-col>
+                <ion-col id="one18" (click)="animations('one18')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Home Clean</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service1.png">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col id="one19" (click)="animations('one19')" size="4" class="animate__animated animate__zoomIn">
+                    <div class="service_box d-flex">
+                        <h2>Electrician</h2>
+                        <div class="service_img ion-text-end">
+                            <img src="assets/images/Handyzone/service2.png">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+
+    <!-- <div class="developed_by d-flex" (click)="developed_by()" *ngIf="config.demoMode">
+      <h2>{{"developed_by" | translate}}</h2>
+      <div class="img_box">
+          <img src="assets/images/Handyzone/opus_labs_dark.png">
+      </div>
+  </div> -->
+</ion-content>

@@ -1,0 +1,287 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import "~animate.css/animate.min.css";
+ion-modal {
+    --background: rgba(0, 0, 0, 0) !important;
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.3) !important;
+}
+
+ion-segment {
+    ion-segment-button {
+        --indicator-box-shadow: none !important;
+        --indicator-color: none !important;
+        --indicator-height: 0px !important;
+        --ripple-color: none !important;
+    }
+}
+
+app-clipix-search {
+    .searchbar-input-container {
+        input {
+            box-shadow: none !important;
+            padding: 0 !important;
+            font-size: 1rem !important;
+            font-weight: 400 !important;
+        }
+    }
+}
+
+.toolbar-title {
+    overflow: visible !important;
+}
+
+.alert-wrapper {
+    --primary: #2172ec;
+    --white: #fff;
+    --text-black: #000;
+    --bg-color: #f2f2f2;
+    border-radius: 13px !important;
+    min-width: calc(100% - 58px) !important;
+    max-height: 484px !important;
+    height: auto;
+    .alert-head {
+        background: var(--bg-color);
+        padding: 20px 27px 16px 27px;
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            font-size: 1rem;
+            color: var(--text-black);
+            font-weight: 600;
+        }
+    }
+    .alert-radio-group {
+        max-height: 291px !important;
+        .alert-radio-button {
+            .alert-button-inner {
+                .alert-radio-label {
+                    font-size: 1.2rem;
+                    color: var(--text-black);
+                }
+            }
+        }
+    }
+    .alert-button-group {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 1.5px;
+            height: 100%;
+            background-color: var(--white);
+            z-index: 9999;
+            margin: 0 auto;
+        }
+        .alert-button {
+            color: var(--white);
+            background: var(--primary);
+            height: 43px;
+            text-align: center;
+            margin: 0;
+            width: 50%;
+            .alert-button-inner {
+                width: 100%;
+                display: block;
+                height: fit-content;
+                font-size: .95rem;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+app-gopool-conversation {
+    &.ion-page {
+        background: #ebf3f9 !important;
+    }
+}
+
+app-gropot-home {
+    .swiper-pagination {
+        bottom: 0 !important;
+        text-align: left;
+        padding: 0 20px;
+        text-align: center;
+        .swiper-pagination-bullet {
+            background: var(--text-light2) !important;
+            width: 5px;
+            height: 4px;
+            border-radius: 5px;
+            margin: 0 2px !important;
+            transition: all 0.4s;
+            opacity: .4 !important;
+            &.swiper-pagination-bullet-active {
+                opacity: 1 !important;
+                width: 18px;
+            }
+        }
+    }
+}
+
+app-gropot-home,
+app-gropot-favorite,
+app-gropot-categories,
+app-gropot-my-orders,
+app-gropot-support {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                box-shadow: none !important;
+                padding: 0 !important;
+                font-weight: 500 !important;
+                font-size: .95rem !important;
+            }
+        }
+    }
+    &.ion-page {
+        padding-left: 60px;
+    }
+}
+
+app-gropot-select-location {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                box-shadow: none !important;
+                padding: 0 !important;
+                font-weight: 500 !important;
+                font-size: .95rem !important;
+            }
+        }
+    }
+}
+
+app-gropot-account {
+    &.ion-page {
+        background: #f4f7f8!important;
+    }
+}
+
+app-handyzone-search {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                box-shadow: none !important;
+                padding: 0 !important;
+                font-size: .97rem !important;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}
+
+app-qvid-search-result {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                box-shadow: none !important;
+                padding: 0 !important;
+                font-size: .95rem !important;
+                font-weight: 400 !important;
+                position: relative !important;
+                text-transform: none !important;
+                text-align: justify !important;
+            }
+        }
+    }
+}
+
+app-shophour-item-detail,
+app-shophour-home {
+    .swiper-pagination {
+        bottom: 12px !important;
+        text-align: left;
+        padding: 0 20px;
+        .swiper-pagination-bullet {
+            opacity: 0.5 !important;
+            background: #fff !important;
+            width: 13px;
+            height: 3px;
+            border-radius: 0;
+            margin: 0 2px !important;
+            &.swiper-pagination-bullet-active {
+                opacity: 1 !important;
+            }
+        }
+    }
+}
+
+app-shophour-search {
+    ion-searchbar {
+        height: 50px;
+        padding: 0 !important;
+        --placeholder-opacity: 1;
+        --placeholder-color: var(--text-dark-primary) !important;
+        .searchbar-input-container {
+            input {
+                box-shadow: none !important;
+                padding: 0 !important;
+                font-size: 0.95rem !important;
+                font-weight: 400 !important;
+                position: relative !important;
+                text-transform: none !important;
+                text-align: justify !important;
+            }
+        }
+    }
+}
+
+app-woochat-voicecall,
+app-woochat-group-chatting,
+app-woochat-chatting {
+    &.ion-page {
+        background: url('assets/images/Woochat/WoochatBg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+ion-app[dir="rtl"] {
+    //	Rtl Css for this app
+    app-home {
+        ion-list ion-item .item_inner {
+            .img_box {
+                right: unset !important;
+                left: 21px !important;
+            }
+            ion-icon {
+                right: unset !important;
+                left: 98px !important;
+            }
+        }
+    }
+}

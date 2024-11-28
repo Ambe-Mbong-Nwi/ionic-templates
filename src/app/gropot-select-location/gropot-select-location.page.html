@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"your_location" | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="bottom_background"></div>
+    <ion-list lines="none">
+
+        <div class="search_box d-flex animate__animated animate__fadeInUp">
+            <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+            <ion-searchbar mode="md" searchIcon="hide" clear-icon="string" placeholder="{{'serach_a_new_address' | translate}}"></ion-searchbar>
+        </div>
+
+        <div class="current_location d-flex animate__animated animate__fadeInUp">
+            <ion-icon class="zmdi zmdi-gps-dot ion-text-start"></ion-icon>
+            <h3> {{"your_current_location" | translate}}</h3>
+        </div>
+
+        <h2 class="animate__animated animate__fadeInUp">{{"saved_location" | translate}}</h2>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="save()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h3>{{"home" | translate}}</h3>
+                    <p>Amazon Park, Terminal 3, Potter rood, New york, United States</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="save()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-city-alt ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h3>{{"office" | translate}}</h3>
+                    <p>B765, Jackson Street, MG Library, New york, United States</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="save()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi  zmdi-nature-people ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h3>{{"other" | translate}}</h3>
+                    <p>Amazon Park, Terminal 3, Potter rood, New york, United States</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

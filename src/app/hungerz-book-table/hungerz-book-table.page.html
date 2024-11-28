@@ -1,0 +1,180 @@
+<!--
+<ion-header>
+    <ion-toolbar>
+        <ion-title>table-booking</ion-title>
+    </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content (click)="dismiss()">
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="form">
+        <ion-list lines="none">
+            <h1>{{'table_booking' | translate}}</h1>
+
+            <div class="radio_list">
+                <ion-radio-group class="animate__animated animate__fadeInUp" value="booking_for">
+                    <h2>{{'booking_for' | translate}}</h2>
+                    <div class="scroll-x">
+                        <ion-item>
+                            <ion-label>1 {{'person' | translate}}</ion-label>
+                            <ion-radio slot="start" value="1"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>2 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="2"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>3 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="3"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>4 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="4"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>5 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="5"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>6 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="6" checked></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>7 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="7"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>8 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="8"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>9 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="9"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>10 {{'persons' | translate}}</ion-label>
+                            <ion-radio slot="start" value="10"></ion-radio>
+                        </ion-item>
+                    </div>
+                </ion-radio-group>
+
+                <ion-radio-group class="animate__animated animate__fadeInUp" value="select_date">
+                    <h2>{{'select_date' | translate}}</h2>
+                    <div class="scroll-x">
+                        <ion-item>
+                            <ion-label>20 June</ion-label>
+                            <ion-radio slot="start" value="1"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>21 June</ion-label>
+                            <ion-radio slot="start" value="2"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>22 June</ion-label>
+                            <ion-radio slot="start" value="3"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>23 June</ion-label>
+                            <ion-radio slot="start" value="4"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>24 June</ion-label>
+                            <ion-radio slot="start" value="5"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>25 June</ion-label>
+                            <ion-radio slot="start" value="6"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>26 June</ion-label>
+                            <ion-radio slot="start" value="7"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>27 June</ion-label>
+                            <ion-radio slot="start" value="8"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>28 June</ion-label>
+                            <ion-radio slot="start" value="9"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>29 June</ion-label>
+                            <ion-radio slot="start" value="10"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>30June</ion-label>
+                            <ion-radio slot="start" value="10"></ion-radio>
+                        </ion-item>
+                    </div>
+                </ion-radio-group>
+
+                <ion-radio-group class="animate__animated animate__fadeInUp" value="select_time">
+                    <h2>{{'select_time' | translate}}</h2>
+                    <div class="scroll-x">
+                        <ion-item>
+                            <ion-label>09:00 am</ion-label>
+                            <ion-radio slot="start" value="1"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>10:00 am</ion-label>
+                            <ion-radio slot="start" value="2"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>10:30 am</ion-label>
+                            <ion-radio slot="start" value="3"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>11:00 am</ion-label>
+                            <ion-radio slot="start" value="4"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>11:30 am</ion-label>
+                            <ion-radio slot="start" value="5"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>12:00 pm</ion-label>
+                            <ion-radio slot="start" value="6"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>12:30 pm</ion-label>
+                            <ion-radio slot="start" value="7"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>01:30 pm</ion-label>
+                            <ion-radio slot="start" value="8"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>02:00 pm</ion-label>
+                            <ion-radio slot="start" value="9"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>02:30 pm</ion-label>
+                            <ion-radio slot="start" value="10"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>03:30 pm</ion-label>
+                            <ion-radio slot="start" value="10"></ion-radio>
+                        </ion-item>
+                    </div>
+                </ion-radio-group>
+            </div>
+
+            <div class="add_note animate__animated animate__fadeInUp">
+                <h2>{{'add_note' | translate}}</h2>
+                <ion-item lines="none">
+                    <div class="item_inner">
+                        <div class="input_box">
+                            <ion-textarea rows="3" mode="md" type="text" placeholder="{{'my_anniversary' | translate}}"></ion-textarea>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+
+        </ion-list>
+    </div>
+    <ion-button size="large" shape="full" class="btn animate__animated animate__fadeInUp" (click)="table_booked()"> {{'book_a_table' | translate}} </ion-button>
+</ion-footer>

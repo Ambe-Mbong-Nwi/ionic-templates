@@ -1,0 +1,263 @@
+div,
+.ios,
+.md {
+    --primary: #fbaf03;
+    --secondary: #7AC81E;
+    --bg-color: #f8f9fd;
+    --text-light: #b3b3b3;
+    --text-dark: #616161;
+    --text-black: #000;
+    --red_color: #F56F70;
+    --white: #fff;
+    --transparent: rgba(0, 0, 0, 0);
+}
+
+.bg_color {
+    --background: var(--bg-color);
+}
+
+.d-flex {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    .end {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        display: block;
+    }
+}
+
+.center_img {
+    position: relative;
+    overflow: hidden;
+    img {
+        &.crop_img {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+.button {
+    &.btn {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.6px !important;
+        height: 55px;
+        --background: var(--primary);
+        color: var(--white);
+        margin: 0;
+        --box-shadow: none;
+        text-transform: none;
+        ion-icon {
+            font-size: 1.4rem;
+        }
+        &:hover:not(.disable-hover) {
+            --background: var(--primary);
+        }
+        &.button-outline {
+            --background: var(--transparent);
+            color: var(--white);
+            --border-color: var(--primary);
+            --border-width: 1px;
+            &:hover:not(.disable-hover) {
+                --background: var(--transparent);
+            }
+        }
+        &.button-round {
+            --border-radius: 50px !important;
+        }
+        &.button-block {
+            --border-radius: 6px !important;
+        }
+    }
+}
+
+ion-header {
+    z-index: 999;
+    &::after {
+        display: none !important;
+    }
+    ion-toolbar {
+        --background: var(--white);
+        display: flex;
+        align-items: center;
+        min-height: 70px !important;
+        height: auto;
+        overflow: visible !important;
+        --border-width: 0 !important;
+        ion-buttons {
+            position: relative !important;
+            margin: 0;
+            --padding-end: 0 !important;
+            --padding-start: 0 !important;
+            ion-back-button {
+                --color: var(--text-black) !important;
+                --icon-font-size: 1.6rem !important;
+            }
+            ion-menu-button {
+                --color: var(--text-black) !important;
+                --padding-end: 0 !important;
+                font-size: 1.8rem !important;
+                margin-right: 12px;
+                &.ios {
+                    font-size: 2rem !important;
+                }
+            }
+            ion-back-button {
+                .button-native {
+                    padding: 0 !important;
+                }
+            }
+            &.ios {
+                padding: 0 10px !important;
+            }
+        }
+        ion-title {
+            color: var(--text-black);
+            padding: 0 15px !important;
+            padding-left: 0 !important;
+            text-align: justify !important;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            text-transform: none;
+            display: block;
+            position: relative !important;
+            left: 0;
+            overflow: visible !important;
+            line-height: 70px;
+        }
+    }
+    &.bg_transparent {
+        ion-toolbar {
+            --background: transparent;
+            --ion-color-base: transparent !important;
+        }
+    }
+}
+
+ion-list {
+    margin: 0;
+    background: none;
+    padding: 10px 20px 0 20px;
+    h2 {
+        margin: 0;
+        color: var(--text-light);
+        font-size: .9rem;
+        padding-bottom: 25px;
+    }
+    ion-item {
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        background: var(--white);
+        margin-bottom: 25px;
+        .item_inner {
+            align-items: flex-start !important;
+            .img_box {
+                min-width: 88px;
+                height: 88px;
+                margin-right: 12px;
+                border-radius: 3px;
+            }
+            .text_box {
+                width: 100%;
+                overflow: hidden;
+                h3 {
+                    margin: 0;
+                    font-size: 1rem;
+                    color: var(--text-black);
+                    padding-bottom: 6px;
+                }
+                h4 {
+                    margin: 0;
+                    color: var(--text-light);
+                    font-size: 0.7rem;
+                    font-weight: 400;
+                    margin-bottom: 7px;
+                    letter-spacing: 0.3px;
+                    align-items: flex-start;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    ion-icon {
+                        min-width: 16px;
+                        padding: 0 2px;
+                        font-size: .8rem;
+                    }
+                }
+                h5 {
+                    margin: 0;
+                    color: var(--secondary);
+                    font-size: 0.73rem;
+                    font-weight: 500;
+                    margin-bottom: 7px;
+                    letter-spacing: 0.3px;
+                    ion-icon {
+                        min-width: 16px;
+                        padding: 0 2px;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.animate__animated {
+    --animate-duration: 0s;
+    &:nth-child(1) {
+        --animate-duration: .15s;
+    }
+    &:nth-child(2) {
+        --animate-duration: .2s;
+    }
+    &:nth-child(3) {
+        --animate-duration: .25s;
+    }
+    &:nth-child(4) {
+        --animate-duration: .3s;
+    }
+    &:nth-child(5) {
+        --animate-duration: .35s;
+    }
+    &:nth-child(6) {
+        --animate-duration: .4s;
+    }
+    &:nth-child(7) {
+        --animate-duration: .45s;
+    }
+    &:nth-child(8) {
+        --animate-duration: .5s;
+    }
+    &:nth-child(9) {
+        --animate-duration: .55s;
+    }
+    &:nth-child(10) {
+        --animate-duration: .6s;
+    }
+    &:nth-child(11) {
+        --animate-duration: .65s;
+    }
+    &:nth-child(12) {
+        --animate-duration: .7s;
+    }
+    &:nth-child(13) {
+        --animate-duration: .5s;
+    }
+    &:nth-child(14) {
+        --animate-duration: .5s;
+    }
+    &:nth-child(15) {
+        --animate-duration: .5s;
+    }
+}

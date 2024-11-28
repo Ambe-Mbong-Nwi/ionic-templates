@@ -1,0 +1,106 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="map center_img">
+        <img src="assets/images/Gropot/map.png" class="map_img crop_img">
+    </div>
+
+    <div class="content">
+        <!-- <ion-card class="animate__animated animate__fadeInUp">
+          <div class="deliveryPersonInfo d-flex">
+              <div class="text_box">
+                  <h3>{{"order_delivered_in" | translate}}</h3>
+                  <h2 class="d-flex">10:30 min
+                      <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                  </h2>
+              </div>
+              <div class="img_container">
+                  <div class="img_box center_img">
+                      <img src="assets/images/Gropot/deliveryman.png" class="crop_img">
+                  </div>
+              </div>
+          </div>
+
+          <div class="progressBar">
+              <div class="progressBarActive" style="width: 100%;"></div>
+          </div>
+          <h4 class=""><strong>Geore Smith</strong> delivered your order on time.</h4>
+      </ion-card> -->
+
+
+        <ion-card class="animate__animated animate__fadeInUp">
+            <div class="deliveryPersonInfo d-flex">
+                <div class="text_box">
+                    <h3>{{"estimated_delivery_in" | translate}}</h3>
+                    <h2 class="d-flex">08:30 min </h2>
+                </div>
+                <div class="img_container">
+                    <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                    <div class="img_box center_img">
+                        <img src="assets/images/Gropot/deliveryman.png" class="crop_img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="progressBar">
+                <div class="progressBarActive" style="width: 30%;"></div>
+            </div>
+            <h4 class=""><strong>Geore Smith</strong> is on the way to delivery your order</h4>
+        </ion-card>
+
+        <h1 class="d-flex animate__animated animate__fadeInUp">
+            {{"ordered_items" | translate}}
+            <span class="end">12 Jun, 12:35 pm</span>
+        </h1>
+
+        <ion-card class="ordered_items animate__animated animate__fadeInUp">
+            <div class="item">
+                <h2 class="d-flex">
+                    Mango x1
+                    <span class="end">$10.00</span>
+                </h2>
+                <h3>5 pcs</h3>
+            </div>
+            <div class="item">
+                <h2 class="d-flex">
+                    Tender Coconut x1
+                    <span class="end">$4.50</span>
+                </h2>
+                <h3>1 pc</h3>
+            </div>
+            <div class="item">
+                <h2 class="d-flex">
+                    Watermelon x1
+                    <span class="end">$5.00</span>
+                </h2>
+                <h3>1 pc</h3>
+            </div>
+
+            <div class="item amountInfo">
+                <h2 class="d-flex">
+                    {{"item_total" | translate}}
+                    <span class="end">$19.50</span>
+                </h2>
+                <h2 class="d-flex">
+                    {{"delivery_fee" | translate}}
+                    <span class="end">$2.00</span>
+                </h2>
+            </div>
+
+            <div class="item amountInfo paidVia">
+                <h2 class="d-flex">
+                    {{"paid_via" | translate}} GroWallet
+                    <span class="end">$21.50</span>
+                </h2>
+            </div>
+        </ion-card>
+
+
+    </div>
+</ion-content>

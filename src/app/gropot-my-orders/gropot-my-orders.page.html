@@ -1,0 +1,178 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- <ion-buttons slot="start">
+          <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+      </ion-buttons> -->
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp">
+            {{"my_orders" | translate}}
+        </h1>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderInfo()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT5421CF
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>12 Jun, 12:35 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        3 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$21.50</span>
+                    </h3>
+
+                    <div class="order_status end in_transist">
+                        <h4>{{"in_transist" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderDelivered()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT6525RT
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>10 Jun, 04:58 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        6 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$33.50</span>
+                    </h3>
+
+                    <div class="order_status end delivered">
+                        <h4>{{"delivered" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderDelivered()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT5421CF
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>08 Jun, 12:40 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        3 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$33.50</span>
+                    </h3>
+
+                    <div class="order_status end delivered">
+                        <h4>{{"delivered" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderInfo()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT5578CT
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>05 Jun, 05:40 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        6 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$33.50</span>
+                    </h3>
+
+                    <div class="order_status end canceled">
+                        <h4>{{"canceled" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderDelivered()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT6525RT
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>10 Jun, 04:58 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        6 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$33.50</span>
+                    </h3>
+
+                    <div class="order_status end delivered">
+                        <h4>{{"delivered" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderDelivered()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT5421CF
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>08 Jun, 12:40 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        3 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$33.50</span>
+                    </h3>
+
+                    <div class="order_status end delivered">
+                        <h4>{{"delivered" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="orderInfo()">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <h2 class="d-flex">
+                        {{"order" | translate}} DT5578CT
+                        <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                    </h2>
+                    <h3>05 Jun, 05:40 pm</h3>
+                </div>
+                <div class="itemFooter d-flex">
+                    <h3 class="d-flex">
+                        6 {{"items" | translate}}
+                        <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                        <span>$33.50</span>
+                    </h3>
+
+                    <div class="order_status end canceled">
+                        <h4>{{"canceled" | translate}}</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

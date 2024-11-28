@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>
+            <div class="title-inner d-flex" (click)="providers()">
+                <span class="end">{{'skip' | translate}}</span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="banner_bg ion-text-end">
+            <img src="assets/images/Handyzone/header_bg.png">
+        </div>
+
+        <div class="text_box">
+            <h2 class="d-flex">{{'service_request' | translate}}</h2>
+            <h3>{{'let_us_know_the_problem' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/Handyzone/vct_servicerequest.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="container animate__animated animate__fadeInUp">
+        <div class="text_box animate__animated animate__fadeInUp">
+            <p>{{'describe_what_problem' | translate}}</p>
+        </div>
+
+        <div class="scroll-x animate__animated animate__fadeInUp">
+            <div class="img_box center_img animate__animated animate__zoomIn">
+                <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+            </div>
+            <!--
+          <div class="img_box center_img animate__animated animate__zoomIn">
+              <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+          </div>
+-->
+
+            <div class="img_box center_img animate__animated animate__zoomIn">
+                <ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>
+            </div>
+        </div>
+
+        <div class="form animate__animated animate__zoomIn">
+            <ion-item lines="none">
+                <div class="item_inner">
+                    <ion-label>{{'write_short_description' | translate}}</ion-label>
+                    <ion-input mode="md" type="name" placeholder="{{'write_short_description' | translate}}"></ion-input>
+                </div>
+            </ion-item>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round" (click)="providers()">{{'find_provider' | translate}}</ion-button>
+</ion-footer>

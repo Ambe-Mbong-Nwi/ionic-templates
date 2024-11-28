@@ -1,0 +1,40 @@
+<ion-tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="qvidHome">
+            <div class="img_box">
+                <img src="assets/images/Qvid/ic_home.png" class="before">
+                <img src="assets/images/Qvid/ic_homeactive.png" class="after">
+            </div>
+            <ion-label>{{'home' | translate}}</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="qvidExplore">
+            <div class="img_box">
+                <img src="assets/images/Qvid/ic_explore.png" class="before">
+                <img src="assets/images/Qvid/ic_exploreactive.png" class="after">
+            </div>
+            <ion-label>{{'explore' | translate}}</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="add_video()" class="add_video_button">
+            <h3><img src="assets/images/Qvid/ic_add.png"></h3>
+        </ion-tab-button>
+
+        <ion-tab-button tab="qvidNotification">
+            <div class="img_box">
+                <img src="assets/images/Qvid/ic_notification.png" class="before">
+                <img src="assets/images/Qvid/ic_notificationactive.png" class="after">
+            </div>
+            <ion-label>{{'notification' | translate}}</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="qvidMyProfile">
+            <div class="img_box">
+                <img src="assets/images/Qvid/ic_profile.png" class="before">
+                <img src="assets/images/Qvid/ic_profileactive.png" class="after">
+            </div>
+            <ion-label>{{'profile' | translate}}</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+
+</ion-tabs>

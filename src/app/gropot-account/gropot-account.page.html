@@ -1,0 +1,122 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <!-- <div class="title-inner d-flex">
+                <div *ngIf="config.demoMode" (click)="buyappalert()" class="buy_this_app end">
+                    <h2>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div>
+            </div> -->
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="header_text animate__animated animate__fadeInUp d-flex">
+        <div class="text_box">
+            <h1>
+                Samantha Smith
+            </h1>
+            <h2>
+                {{"view_profile" | translate}}
+            </h2>
+        </div>
+        <div class="img_box center_img end">
+            <img src="assets/images/Gropot/profile.png" class="crop_img">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-globe ion-text-start"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <ion-label>{{"change_language" | translate}}</ion-label>
+                        <div class="select_box d-flex">
+                            <ion-select okText="{{'ok' | translate}}" cancelText="{{'cancel' | translate}}" [(ngModel)]="change_language">
+                                <ion-select-option value="en">English</ion-select-option>
+                                <ion-select-option value="ar">عربى</ion-select-option>
+                                <ion-select-option value="fr">Français</ion-select-option>
+                                <ion-select-option value="es">Española</ion-select-option>
+                                <ion-select-option value="id">Bahasa Indonesia</ion-select-option>
+                                <ion-select-option value="pt">Português</ion-select-option>
+                                <ion-select-option value="tr">Türk</ion-select-option>
+                                <ion-select-option value="it">Italiana</ion-select-option>
+                                <ion-select-option value="sw">Kiswahili</ion-select-option>
+                                <ion-select-option value="de">Deutsch</ion-select-option>
+                                <ion-select-option value="ro">Română</ion-select-option>
+                            </ion-select>
+                            <ion-icon class="zmdi zmdi-chevron-down  ion-text-end end" style="color: var(--text-dark);"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi  zmdi-pin-help ion-text-start"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <ion-label>{{"faqs" | translate}}</ion-label>
+                        <h3>{{"get_your_question_answered" | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi  zmdi-assignment ion-text-start"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <ion-label>{{"terms_conditions" | translate}}</ion-label>
+                        <h3>{{"know_terms_of_use" | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi  zmdi-lock ion-text-start"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <ion-label>{{"privacy_polisy" | translate}}</ion-label>
+                        <h3>{{"companies_privacy_policy" | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="logout()">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-power ion-text-start"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <ion-label>{{"logout" | translate}}</ion-label>
+                        <h3>{{"sign_out_form_account" | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+
+<!-- <ion-footer class="ion-no-border">
+    <div class="developed_by d-flex animate__animated animate__fadeInUp" (click)="developed_by()" *ngIf="config.demoMode">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box end">
+            <img src="assets/images/opus_labs.png">
+        </div>
+    </div>
+</ion-footer> -->

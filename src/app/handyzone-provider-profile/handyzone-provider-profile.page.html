@@ -1,0 +1,926 @@
+<ion-header [class.active]="showToolbar" [ngClass]="viewType == 'active' ? 'header active':'header'">
+    <ion-toolbar>
+        <div class="toolbar_inner">
+            <ion-buttons slot="start" mode="md">
+                <ion-back-button text="" icon=""></ion-back-button>
+            </ion-buttons>
+            <ion-title>
+                <div class="title-inner d-flex">
+                    <div class="nameCategory">
+                        <h2>Emili Anderson</h2>
+                        <h3>Cleaner</h3>
+                    </div>
+                    <div class="scroll_btn end" (click)="scrollContent('top')" (click)="setViewType(null)">
+                        <span class="zmdi zmdi-chevron-up ion-text-end"></span>
+                        <h3>{{'top' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-title>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <div>
+            <div class="background">
+                <img src="assets/images/Handyzone/banner_bg.png">
+            </div>
+
+            <div class="profile_img animate__animated animate__fadeInUp">
+                <img src="assets/images/Handyzone/provider_1.png">
+            </div>
+
+            <ion-item class="info animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="nameCategory">
+                        <h2>Emili Anderson</h2>
+                        <h3>Cleaner</h3>
+                    </div>
+
+                    <div class="about">
+                        <p>Lorem Ipsum is simply dummy text of the printing .</p>
+                    </div>
+                    <ion-row>
+                        <ion-col size="4">
+                            <h4>{{'jobs' | translate}}</h4>
+                            <h5>187</h5>
+                        </ion-col>
+                        <ion-col size="4">
+                            <h4>{{'rate' | translate}}</h4>
+                            <h5>$12 <small>/hr</small></h5>
+                        </ion-col>
+
+                        <ion-col size="4" (click)="scrollContent('bottom')" (click)="setViewType('active')">
+                            <h4 class="d-flex">{{'rating' | translate}}
+                                <ion-icon class="zmdi zmdi-chevron-down end ion-text-end"></ion-icon>
+                            </h4>
+                            <h5>
+                                <ion-icon class="zmdi zmdi-star"></ion-icon> 4.5<small>(187)</small>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="work_protfolio animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2>{{'work_protfolio' | translate}}</h2>
+                    <div class="scroll-x">
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio1.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio2.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio3.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio4.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio5.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio6.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio7.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio1.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio2.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio3.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio4.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio5.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio6.png" class="crop_img">
+                        </div>
+                        <div class="img_box center_img animate__animated animate__zoomIn">
+                            <img src="assets/images/Handyzone/protfolio7.png" class="crop_img">
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+        </div>
+
+        <div class="latest_reviews">
+            <h1>{{'latest_reviews' | translate}}</h1>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2>Jassisa Haydon</h2>
+                            <h3 class="d-flex">
+                                20 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+                    </div>
+
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic3.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Peter George</h2>
+                            <h3 class="d-flex">
+                                18 Dec, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star "></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+
+                    <!--
+                      <div class="scroll-x">
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic1.png" class="crop_img">
+                          </div>
+                          <div class="img_box center_img">
+                              <img src="assets/images/Handyzone/pic2.png" class="crop_img">
+                          </div>
+                      </div>
+-->
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="item_header d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/profile-pic2.png" class="crop_img">
+                        </div>
+
+                        <div class="text_box">
+                            <h2>Illiana Jackson</h2>
+                            <h3 class="d-flex">
+                                22 Nov, 2020
+                                <span class="end">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <p>Awesome work, Neat & Clean work.</p>
+                    </div>
+
+                    <div class="scroll-x">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                        </div>
+                        <div class="img_box center_img">
+                            <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                        </div>
+
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round" (click)="booking()">{{'hire_request' | translate}}</ion-button>
+</ion-footer>

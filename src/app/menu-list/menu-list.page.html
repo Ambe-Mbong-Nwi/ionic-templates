@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title> </ion-title>
+    </ion-toolbar>
+
+    <div class="banner">
+        <h2>{{'menu' | translate}} <br> {{'demo' | translate}}</h2>
+        <ion-icon class="zmdi zmdi-menu"></ion-icon>
+        <div class="img_box">
+            <img src="assets/images/menu_screen.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-list lines="none">
+        <ion-item (click)="viewMenu('first')">
+            <div class="item_inner">
+                <ion-icon text-start class="zmdi zmdi-menu"></ion-icon>
+                <h2>{{'view' | translate}} <span>{{'demo' | translate}} 1</span></h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="viewMenu('second')">
+            <div class="item_inner">
+                <ion-icon text-start class="zmdi zmdi-menu"></ion-icon>
+                <h2>{{'view' | translate}} <span>{{'demo' | translate}} 2</span></h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="viewMenu('third')">
+            <div class="item_inner">
+                <ion-icon text-start class="zmdi zmdi-menu"></ion-icon>
+                <h2>{{'view' | translate}} <span>{{'demo' | translate}} 3</span></h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="viewMenu('forth')">
+            <div class="item_inner">
+                <ion-icon text-start class="zmdi zmdi-menu"></ion-icon>
+                <h2>{{'view' | translate}} <span>{{'demo' | translate}} 4</span></h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="viewMenu('five')">
+            <div class="item_inner">
+                <ion-icon text-start class="zmdi zmdi-menu"></ion-icon>
+                <h2>{{'view' | translate}} <span>{{'demo' | translate}} 5</span></h2>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,1149 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{'watchlist' | translate}}</ion-title>
+    </ion-toolbar>
+    <ion-segment mode="ios" [(ngModel)]="tab" lines="none">
+        <ion-segment-button mode="ios" value="movies">
+            <ion-label>
+                {{'movies' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="tv_shows">
+            <ion-label>
+                {{'tv_shows' | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="tab_content" [ngSwitch]="tab">
+
+        <ion-list lines="none" *ngSwitchCase="'movies'">
+            <ion-item [ngClass]="toggle1 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">2 Stupids</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption1()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy, Drama</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle17 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption17()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+
+            <ion-item [ngClass]="toggle2 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/2.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Roomates</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption2()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Drama, Adventure</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle3 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Queen of Heart</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption3()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Drama, Adventure</h3>
+                        <h3 (click)="movie()">Spanish</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle4 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption4()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle5 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">World and Us</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption5()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy, Drama</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle6 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">CorpoMan</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption6()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Adventure</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle7 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">2 Stupids</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption7()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy, Drama</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle8 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/2.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Roomates</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption8()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Drama, Adventure</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle9 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Queen of Heart</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption9()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Drama, Adventure</h3>
+                        <h3 (click)="movie()">Spanish</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle10 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption10()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle11 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">World and Us</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption11()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Comedy, Drama</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle13 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="movie()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="movie()">CorpoMan</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption13()"></ion-icon>
+                        </h2>
+                        <h3 (click)="movie()">Adventure</h3>
+                        <h3 (click)="movie()">English</h3>
+                        <h4 class="d-flex" (click)="movie()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+
+
+
+        <ion-list lines="none" *ngSwitchCase="'tv_shows'">
+            <ion-item [ngClass]="toggle18 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">World and Us</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption18()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy, Drama</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle19 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">CorpoMan</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption19()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Adventure</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle16 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Queen of Heart</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption16()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">Spanish</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle17 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption17()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item [ngClass]="toggle14 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">2 Stupids</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption14()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy, Drama</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle15 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/2.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Roomates</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption15()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle20 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Queen of Heart</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption20()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">Spanish</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle22 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption22()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item [ngClass]="toggle24 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">2 Stupids</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption24()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy, Drama</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle25 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/2.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Roomates</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption25()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle26 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Queen of Heart</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption26()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">Spanish</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle27 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption27()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle28 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">World and Us</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption28()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy, Drama</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle29 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">CorpoMan</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption30()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Adventure</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle31 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">2 Stupids</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption32()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy, Drama</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle33 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/2.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Roomates</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption33()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle34 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Queen of Heart</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption34()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Drama, Adventure</h3>
+                        <h3 (click)="web_series()">Spanish</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item [ngClass]="toggle35 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">Wosop !!</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption35()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 35 min
+                            <small>&nbsp;</small> 68 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle36 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">World and Us</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption36()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Comedy, Drama</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            2 hr 10 min
+                            <small>&nbsp;</small> 129 MB
+                            <span class="end">
+                              <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>
+                              {{'download' | translate}}
+                          </span>
+                        </h4>
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item [ngClass]="toggle37 ? 'active' : ''">
+                <div class="item_inner d-flex">
+                    <div class="item_img" (click)="web_series()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                        <ion-icon class="zmdi zmdi-play ion-text-center"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <span (click)="web_series()">CorpoMan</span>
+                            <ion-icon class="zmdi zmdi-more-vert ion-text-end end" (click)="toggleOption37()"></ion-icon>
+                        </h2>
+                        <h3 (click)="web_series()">Adventure</h3>
+                        <h3 (click)="web_series()">English</h3>
+                        <h4 class="d-flex" (click)="web_series()">
+                            1 hr 45 min
+                            <small>&nbsp;</small> 265 MB
+                            <span class="end downloaded">
+                              <!--                                <ion-icon class="zmdi zmdi-download ion-text-start"></ion-icon>-->
+                              {{'downloaded' | translate}}
+                          </span>
+                        </h4>
+
+                        <div class="more">
+                            <h2 class="d-flex">
+                                <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                {{'remove' | translate}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

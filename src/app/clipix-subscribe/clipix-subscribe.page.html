@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'subscribe' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <ion-item (click)="payment()">
+            <div class="item_inner">
+                <h2>Starter Pack</h2>
+                <h3 class="d-flex">
+                    3 Month <span class="end">$9.99</span>
+                </h3>
+            </div>
+        </ion-item>
+        <ion-item (click)="payment()">
+            <div class="item_inner">
+                <h2>Standard Pack</h2>
+                <h3 class="d-flex">
+                    6 Month <span class="end">$9.99</span>
+                </h3>
+            </div>
+        </ion-item>
+        <ion-item (click)="payment()">
+            <div class="item_inner">
+                <h2>Super Saver Pack</h2>
+                <h3 class="d-flex">
+                    12 Month <span class="end">$9.99</span>
+                </h3>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <div class="why_upgrade">
+        <h1>{{'why_upgrade' | translate}}<br>{{'to_premium' | translate}}?</h1>
+
+        <div class="features">
+            <p class="d-flex">
+                <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                Get Access to All Full HD Contents
+            </p>
+            <p class="d-flex">
+                <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                Enable Download Movies
+            </p>
+            <p class="d-flex">
+                <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                Watch Premium Contents
+            </p>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp">
+            {{"support" | translate}}
+        </h1>
+        <h2 class="animate__animated animate__fadeInUp" innerHTML="{{'let_us_know_your_feedback_queries' | translate}}">
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="input_box d-flex">
+                        <h3> {{"call_us" | translate}} </h3>
+                        <ion-icon class="zmdi zmdi-phone ion-text-end end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="input_box d-flex">
+                        <h3> {{"email_us" | translate}} </h3>
+                        <ion-icon class="zmdi zmdi-email ion-text-end end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+
+            <div class="text_box animate__animated animate__fadeInUp">
+                <h1 class="animate__animated animate__fadeInUp">
+                    {{"write_us" | translate}}
+                </h1>
+                <h2 class="animate__animated animate__fadeInUp">
+                    {{"enter_your_message" | translate}}
+                </h2>
+            </div>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md" style="display:none;">{{"select_subject" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select mode="md" placeholder="{{'select_subject' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}">
+                            <ion-select-option value="1">Urgency</ion-select-option>
+                            <ion-select-option value="2">Curiosity</ion-select-option>
+                            <ion-select-option value="3">Personalization</ion-select-option>
+                            <ion-select-option value="4">Relevance and Timeliness</ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <!-- <ion-label>{{'share_your_experience' | translate}}</ion-label> -->
+                    <div class="input_box">
+                        <ion-textarea type="text" rows="4" value="" placeholder="{{ 'write_heare' | translate}}"></ion-textarea>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="submit()">{{'submit' | translate}}</ion-button>
+
+        </ion-list>
+    </div>
+
+    <div class="footer_img">
+        <img src="assets/images/Gropot/contact_footer.png">
+    </div>
+</ion-content>

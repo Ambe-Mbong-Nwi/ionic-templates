@@ -1,0 +1,25 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline" defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+    <div class="logo-box ion-text-center">
+        <img src="assets/images/Woochat/logo.png" class="animated zoomIn delay_2">
+    </div>
+
+    <div class="form">
+        <ion-list lines="none" class="animated slideInUp delay_2">
+            <ion-item lines="none">
+                <h2 slot="start" class="ion-text-center">+1</h2>
+                <ion-input type="number" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+                <ion-button slot="end" size="large" shape="round" class="btn" (click)="tabs()">{{'next' | translate}}</ion-button>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

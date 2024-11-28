@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"payment_methods" | translate}}
+        </ion-title>
+    </ion-toolbar>
+    <div class="header_text">
+        <h3 class="d-flex">
+            {{"amount_to_pay" | translate}}
+            <span class="end">$100</span>
+        </h3>
+
+        <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="home()">
+            <ion-icon class="zmdi zmdi-flash ion-text-start"></ion-icon>
+            {{'insant_pay_with' | translate}} <strong>Gro Wallet</strong>
+        </ion-button>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <h2 class="animate__animated animate__fadeInUp">{{"wallets" | translate}}</h2>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="home()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/payment/payPal.png">
+                </div>
+                <h3>PayPal</h3>
+            </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="home()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/payment/payumoney.png">
+                </div>
+                <h3>PayU money</h3>
+            </div>
+        </ion-item>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="home()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/payment/stripe.png">
+                </div>
+                <h3>Stripe</h3>
+            </div>
+        </ion-item>
+
+        <h2 class="animate__animated animate__fadeInUp">{{"card" | translate}}</h2>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="home()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/payment/card.png" style="width: 40px;">
+                </div>
+                <h3>Credit Card/ Debit Cards</h3>
+            </div>
+        </ion-item>
+
+        <h2 class="animate__animated animate__fadeInUp">{{"pay_on_delivery" | translate}}</h2>
+
+        <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="home()">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/payment/cod.png" style="width: 50px;">
+                </div>
+                <h3>Cash on delivery</h3>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

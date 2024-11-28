@@ -1,0 +1,757 @@
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div (click)="back()" class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="banner_bg ion-text-end">
+            <img src="assets/images/Handyzone/header_bg.png">
+        </div>
+        <div class="text_box">
+            <h2 class="d-flex">Home Clean</h2>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/Handyzone/service1.png">
+        </div>
+
+    </div>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none" class="animate__animated animate__fadeInUp">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Carpet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$20 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_sofa.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Sofa Shampooing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$22 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_bedroon.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Bedroom Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$35 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_fullhome.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Full Home Deep Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$55 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_aqrm.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Aquarium Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$10 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_wasahroom.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Toilet Cleaning
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="service_request()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_floor.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        Floor Scrubbing & Polishing
+                        <ion-icon class="end ion-text-end zmdi zmdi-chevron-right"></ion-icon>
+                    </h2>
+                    <h3>$12 {{'onwards' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,515 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<!--<ion-content class="bg_color" fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">-->
+<ion-content class="bg_color" fullscreen>
+    <!--    <div class="banner" [class.active]="showToolbar">-->
+    <div class="banner">
+        <div class="video center_img">
+            <img src="assets/images/Clipix/movie_poster.png" class="crop_img">
+            <div class="play_btn">
+                <ion-icon class="zmdi zmdi-play"></ion-icon>
+            </div>
+
+            <div class="text_box">
+                <h2>CorpoMan</h2>
+                <h3 class="d-flex">
+                    2 hr 10 min <span></span> Comedy <span></span> 2020 <span></span> English
+                </h3>
+
+                <div class="btn_box d-flex">
+                    <ion-button size="large" shape="round" class="btn">
+                        <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                        {{'watch_movie' | translate}}
+                    </ion-button>
+                    &nbsp; &nbsp;&nbsp;
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-plus ion-text-center"></ion-icon>
+                        &nbsp; &nbsp;
+                        <ion-icon class="zmdi zmdi-download ion-text-center"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="details">
+            <div class="description">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when .</p>
+            </div>
+
+            <ion-segment mode="ios" [(ngModel)]="tab" lines="none">
+                <ion-segment-button mode="ios" value="clips">
+                    <ion-label>
+                        {{'clips' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+                <ion-segment-button mode="ios" value="reviews">
+                    <ion-label>
+                        {{'reviews' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+    </div>
+    <!--    <div class="spesh_bar" [class.active]="showToolbar"></div>-->
+
+
+    <div class="tab_content" [ngSwitch]="tab">
+
+        <div class="clips" *ngSwitchCase="'clips'">
+            <ion-card>
+                <div class="scrollX">
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/movie_thum1.png" class="crop_img">
+                            <p class="ion-text-end">0:23 sec</p>
+                            <div class="details">
+                                <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h3>Trailer #1 of <br> Corpomam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/movie_thum2.png" class="crop_img">
+                            <p class="ion-text-end">0:31 sec</p>
+                            <div class="details">
+                                <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h3>Trailer #2 of <br> Corpomam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/movie_thum1.png" class="crop_img">
+                            <p class="ion-text-end">0:23 sec</p>
+                            <div class="details">
+                                <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h3>Trailer #1 of <br> Corpomam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/movie_thum2.png" class="crop_img">
+                            <p class="ion-text-end">0:31 sec</p>
+                            <div class="details">
+                                <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h3>Trailer #2 of <br> Corpomam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/movie_thum1.png" class="crop_img">
+                            <p class="ion-text-end">0:23 sec</p>
+                            <div class="details">
+                                <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h3>Trailer #1 of <br> Corpomam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/movie_thum2.png" class="crop_img">
+                            <p class="ion-text-end">0:31 sec</p>
+                            <div class="details">
+                                <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h3>Trailer #2 of <br> Corpomam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-card>
+
+            <ion-card class="recently_added">
+                <h2 class="d-flex"> {{'similar_movies' | translate}}
+                    <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                </h2>
+                <div class="scrollX">
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/1.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/2.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/7.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/8.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/9.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/10.png" class="crop_img">
+                        </div>
+                    </div>
+                </div>
+            </ion-card>
+
+
+            <ion-card class="recently_added">
+                <h2 class="d-flex">{{'movies_you_may_like' | translate}}
+                    <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+                </h2>
+                <div class="scrollX">
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/11.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/12.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/10.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/9.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/8.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/7.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/6.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/5.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/4.png" class="crop_img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_img center_img">
+                            <img src="assets/images/Clipix/3.png" class="crop_img">
+                        </div>
+                    </div>
+                </div>
+            </ion-card>
+        </div>
+
+
+        <ion-list lines="none" *ngSwitchCase="'reviews'">
+            <div class="people_rated d-flex">
+                <h3>4.3
+                    <ion-icon class="zmdi zmdi-star ion-text-end"></ion-icon>
+                </h3>&nbsp;&nbsp;
+                <h5>98 {{'people_rated' | translate}}</h5>
+            </div>
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Emili Williamson
+
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>15 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Rose Taylor
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>13 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Emili Williamson
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>10 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Emili Williamson
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>5 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Emili Williamson
+
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>15 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Rose Taylor
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>13 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Emili Williamson
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>10 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item>
+                <div class="item_inner">
+                    <div class="user_details d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/Clipix/user_4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                Emili Williamson
+                                <span class="end ratings_icon">
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                  <ion-icon class="zmdi zmdi-star"></ion-icon>
+                              </span>
+                            </h2>
+                            <h3>5 June 2020</h3>
+                        </div>
+                    </div>
+                    <div class="rating_text">
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <ion-fab *ngIf="tab == 'reviews'" vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button>
+            <ion-icon class="zmdi zmdi-plus "></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

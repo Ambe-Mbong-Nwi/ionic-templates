@@ -1,0 +1,36 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button defaultHref="clipix-sign-in" text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'sign_up' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="logo animate__animated animate__zoomIn">
+        <img src="assets/images/Clipix/logo.png">
+    </div>
+    <div class="form animate__animated animate__zoomIn">
+        <ion-list lines="none">
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"full_name" | translate}}</ion-label>
+                <ion-input mode="md" type="name" value="Samantha Smith"></ion-input>
+            </ion-item>
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"email_address" | translate}}</ion-label>
+                <ion-input mode="md" type="email" value="samanthasmith@mail.com"></ion-input>
+            </ion-item>
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"phone_num" | translate}}</ion-label>
+                <ion-input mode="md" type="text" value="+1 987 654 3210"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button size="large" shape="round" class="btn" (click)="clipixTabs()">{{'continue' | translate}}</ion-button>
+    </div>
+    <div class="footer_text ion-text-center animate__animated animate__fadeInUp">
+        <h3>{{'by_signing_up_you_are_agreed_with_our' | translate}}
+            <span class="">{{'terms_conditions' | translate}}</span>
+        </h3>
+    </div>
+</ion-content>

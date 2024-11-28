@@ -1,0 +1,153 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'account' | translate}}
+                <span class="end" (click)="sign_in()"> {{'logout' | translate}} </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <!-- <div class="buy_this_app end" (click)="buyappalert()" *ngIf="config.demoMode">
+        <h2> 
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div> -->
+
+    <div class="profile_box d-flex" (click)="my_profile()">
+        <div class="img_box center_img">
+            <img src="assets/images/Clipix/profile.png">
+        </div>
+        <div class="text_box">
+            <h2 class="d-flex">Samantha Smith
+                <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+            </h2>
+            <!--
+          <div class="premium d-flex">
+              <img src="assets/images/Clipix/ic_crown.png">&nbsp; {{'premium' | translate}}
+          </div>
+-->
+            <div class="premium non_premium d-flex">
+                <img src="assets/images/Clipix/ic_crown_2.png">&nbsp; {{'non_premium' | translate}}
+            </div>
+        </div>
+    </div>
+
+    <ion-list lines="none">
+        <ion-item (click)="settings()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-settings"></ion-icon>
+                <h2>{{'settings' | translate}}</h2>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-assignment"></ion-icon>
+                <h2>{{'privacy_policy' | translate}}</h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="support()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-email"></ion-icon>
+                <h2>{{'support' | translate}}</h2>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="scrollX">
+        <div class="item">
+            <div class="text_box">
+                <h3>Get Access to All Full HD Contents</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium1.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Enable Download Movies</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium2.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Get Access to All Full HD Contents</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium3.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Get Access to All Full HD Contents</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium1.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Enable Download Movies</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium2.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Get Access to All Full HD Contents</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium3.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Get Access to All Full HD Contents</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium1.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Enable Download Movies</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium2.png" class="crop_img">
+            </div>
+        </div>
+        <div class="item">
+            <div class="text_box">
+                <h3>Get Access to All Full HD Contents</h3>
+            </div>
+            <div class="item_img center_img">
+                <img src="assets/images/Clipix/premium3.png" class="crop_img">
+            </div>
+        </div>
+    </div>
+
+    <ion-button size="large" shape="round" class="btn" (click)="subscribe()">
+        <img src="assets/images/Clipix/ic_crown.png">&nbsp; {{'upgrade_to_premium' | translate}}
+    </ion-button>
+
+    <!--
+  <ion-button size="large" shape="round" fill="outline" class="btn">
+      <img src="assets/images/Clipix/ic_crown.png">&nbsp;
+      {{'you_ve_premium_account' | translate}}
+  </ion-button>
+-->
+
+    <!-- <div class="developed_by d-flex" (click)="developed_by()" *ngIf="config.demoMode">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box">
+            <img src="assets/images/Clipix/opus_logo_light.png">
+        </div>
+    </div> -->
+</ion-footer>

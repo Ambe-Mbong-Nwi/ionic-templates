@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+    <div class="banner animate__animated animate__fadeInUp">
+        <h2>{{'how_can_we_help' | translate}}?</h2>
+        <div class="banner_img">
+            <img src="assets/images/Handyzone/sign_img.png">
+        </div>
+        <div class="search_box d-flex animate__animated animate__zoomIn">
+            <img src="assets/images/Handyzone/ic_search.png">&nbsp;&nbsp;&nbsp;
+            <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_service' | translate}}"></ion-searchbar>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="recent_searches animate__animated animate__fadeInUp">
+        <h1>{{'recent_searches' | translate}}</h1>
+
+        <h3 class="d-flex" (click)="services()"><img src="assets/images/Handyzone/ic_recent.png">&nbsp;&nbsp;&nbsp;Wall Painting</h3>
+        <h3 class="d-flex" (click)="services()"><img src="assets/images/Handyzone/ic_recent.png">&nbsp;&nbsp;&nbsp;Plantaion</h3>
+        <h3 class="d-flex" (click)="services()"><img src="assets/images/Handyzone/ic_recent.png">&nbsp;&nbsp;&nbsp;Plumbing</h3>
+    </div>
+</ion-content>

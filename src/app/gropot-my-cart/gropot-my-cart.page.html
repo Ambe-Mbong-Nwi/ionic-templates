@@ -1,0 +1,284 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{"my_cart" | translate}} (3)
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" [fullscreen]="true">
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/items/items5.png">
+                </div>
+                <div class="text_box">
+                    <h2>Mango</h2>
+                    <div class="d-flex">
+                        <h3 class="d-flex">5 pcs</h3>
+                        <div class="itemPrice end">
+                            <div class="addRemoveButton">
+                                <span class="RemoveButton">-</span>
+                                <strong>1</strong>
+                                <span>+</span>
+                            </div>
+                        </div>
+                        <h4 class="ion-text-end">$10.00</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/items/items7.png">
+                </div>
+                <div class="text_box">
+                    <h2>Tender Coconut</h2>
+                    <div class="d-flex">
+                        <h3 class="d-flex">1 pc</h3>
+                        <div class="itemPrice end">
+                            <div class="addRemoveButton">
+                                <span class="RemoveButton">-</span>
+                                <strong>1</strong>
+                                <span>+</span>
+                            </div>
+                        </div>
+                        <h4 class="ion-text-end">$4.50</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box">
+                    <img src="assets/images/Gropot/items/items8.png">
+                </div>
+                <div class="text_box">
+                    <h2>Watermelon</h2>
+                    <div class="d-flex">
+                        <h3 class="d-flex">1 pc</h3>
+                        <div class="itemPrice end">
+                            <div class="addRemoveButton">
+                                <span class="RemoveButton">-</span>
+                                <strong>1</strong>
+                                <span>+</span>
+                            </div>
+                        </div>
+                        <h4 class="ion-text-end">$5.00</h4>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp couponCode" (click)="coupon()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-label ion-text-start"></ion-icon>
+                <h3 class="d-flex">
+                    {{"add_coupon_code" | translate}}
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h3>
+            </div>
+        </ion-item>
+
+        <div class="similar_products animate__animated animate__fadeInUp">
+            <h2>Frequently bought together</h2>
+
+            <div class="item_list">
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Watermelon</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items8.png">
+                    </div>
+                    <div class="itemFooter d-flex">
+                        <div class="text_box" (click)="itemInfo()">
+                            <h3>1 pc</h3>
+                            <h2>$5.00</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Tender Coconut</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items7.png">
+                        <h5>10% off</h5>
+                    </div>
+                    <div (click)="itemInfo()" class="itemFooter d-flex">
+                        <div class="text_box">
+                            <h3>1 pc</h3>
+                            <h2>$4.50</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Muskmelon</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items6.png">
+                    </div>
+                    <div class="itemFooter d-flex">
+                        <div class="text_box" (click)="itemInfo()">
+                            <h3>1 pc</h3>
+                            <h2>$5.50</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Fresh Kiwi</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items3.png">
+                    </div>
+                    <div class="itemFooter d-flex">
+                        <div class="text_box" (click)="itemInfo()">
+                            <h3>500 gm</h3>
+                            <h2>$6.00</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Jackfruit</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items2.png">
+                    </div>
+                    <div class="itemFooter d-flex">
+                        <div class="text_box" (click)="itemInfo()">
+                            <h3>1 kg</h3>
+                            <h2>$4.50</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Green Mango</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items4.png">
+                    </div>
+                    <div class="itemFooter d-flex">
+                        <div class="text_box" (click)="itemInfo()">
+                            <h3>1 kg</h3>
+                            <h2>$5.70</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="itemHeader" (click)="itemInfo()">
+                        <h3 class="d-flex">Coconut</h3>
+                    </div>
+                    <div class="img_box" (click)="itemInfo()">
+                        <img src="assets/images/Gropot/items/items1.png">
+                    </div>
+                    <div class="itemFooter d-flex">
+                        <div class="text_box" (click)="itemInfo()">
+                            <h3>1 pc</h3>
+                            <h2>$2.50</h2>
+                        </div>
+                        <div class="addRemoveButton end">
+                            <span>+</span>
+                            <strong>1</strong>
+                            <span class="RemoveButton">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <ion-item class="animate__animated animate__fadeInUp amountInfo">
+            <div class="item_inner">
+                <h3 class="d-flex">
+                    {{"item_total" | translate}}
+                    <span class="end">$19.50</span>
+                </h3>
+                <h3 class="d-flex">
+                    {{"delivery_fee" | translate}}
+                    <span class="end">$2.00</span>
+                </h3>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp amountInfo">
+            <div class="item_inner">
+                <h2 class="d-flex">
+                    {{"amount_to_pay" | translate}}
+                    <span class="end">$21.50</span>
+                </h2>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <h2 class="d-flex">
+        <img src="assets/images/Gropot/map_pin.png">
+        <span>Home - B765, Jackson Street, MG Library, New york, United States </span>
+        <strong class="end" (click)="selectLocation()"> {{"change" | translate}}</strong>
+    </h2>
+
+    <ion-row>
+        <ion-col size="4">
+            <h3>$35.50</h3>
+            <h4>{{"view_bill" | translate}}
+                <ion-icon class="zmdi zmdi-info-outline ion-text-end"></ion-icon>
+            </h4>
+        </ion-col>
+        <ion-col size="8">
+            <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="paymentMethod()">{{'continue_to_pay' | translate}}</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

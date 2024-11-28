@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" defaultHref="sign-in" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'settings' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"download_video_quality" | translate}}</ion-label>
+                <ion-select [(ngModel)]="video_quality">
+                    <ion-select-option value="1">HD (High Definition) 720 p</ion-select-option>
+                    <ion-select-option value="2">1080i</ion-select-option>
+                    <ion-select-option value="3">1080p</ion-select-option>
+                    <ion-select-option value="4">1440p</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"downloads" | translate}}</ion-label>
+                <ion-select [(ngModel)]="downloads">
+                    <ion-select-option value="1">WiFi Only</ion-select-option>
+                    <ion-select-option value="2">Mobile Deta Only</ion-select-option>
+                    <ion-select-option value="3">Mobile Deta & WiFi</ion-select-option>
+                    <ion-select-option value="4">Always Ask</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"preferred_app_language" | translate}}</ion-label>
+                <ion-select [(ngModel)]="language">
+                    <ion-select-option value="1">English</ion-select-option>
+                    <ion-select-option value="2">عربى</ion-select-option>
+                    <ion-select-option value="3">Français</ion-select-option>
+                    <ion-select-option value="4">Española</ion-select-option>
+                    <ion-select-option value="5">Bahasa Indonesia</ion-select-option>
+                    <ion-select-option value="6">Português</ion-select-option>
+                    <ion-select-option value="7">Türk</ion-select-option>
+                    <ion-select-option value="4">Italiana</ion-select-option>
+                    <ion-select-option value="8">Kiswahili</ion-select-option>
+                    <ion-select-option value="9">Deutsch</ion-select-option>
+                    <ion-select-option value="10">Română</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" shape="round" class="btn">{{'continue' | translate}}</ion-button>
+</ion-footer>

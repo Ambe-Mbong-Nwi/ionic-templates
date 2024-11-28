@@ -1,0 +1,41 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" defaultHref="home" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'sign_in' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="logo animate__animated animate__zoomIn">
+        <img src="assets/images/Clipix/logo.png">
+    </div>
+
+    <div class="form animate__animated animate__zoomIn">
+        <h2>{{'enter_phone_number' | translate}}<br>{{'to_continue' | translate}}</h2>
+        <ion-list lines="none">
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"phone_num" | translate}}</ion-label>
+                <ion-input mode="md" type="text" value="+1 987 654 3210"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button size="large" shape="round" class="btn" (click)="sign_up()">{{'continue' | translate}}</ion-button>
+        <div class="social_login">
+            <h3 class="ion-text-center">{{"or_continue_with" | translate}}</h3>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-button size="large" shape="round" class="btn facebook" (click)="sign_up()">
+                        <img src="assets/images/Clipix/ic_fb.png"> {{'facebook' | translate}}
+                    </ion-button>
+                </ion-col>
+
+                <ion-col size="6">
+                    <ion-button size="large" shape="round" class="btn google" (click)="sign_up()">
+                        <img src="assets/images/Clipix/ic_ggl.png"> {{'google' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,1324 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <!-- {{'enter_location_details' | translate}} -->
+            <div class="title_inner d-flex">
+                <div class="text_box">
+                    <h2>{{"browse_category" | translate}}</h2>
+                    <h3>Fruits & Vegetables</h3>
+                </div>
+                <div class="icon_box end">
+                    <ion-icon class="zmdi zmdi-unfold-more ion-text-start" (click)="AddClass()"></ion-icon>
+                    <ion-icon class="zmdi zmdi-search ion-text-end"></ion-icon>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<div class="bg_overlay md ios" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'" (click)="AddClass()"></div>
+<div class="browse_category md ios" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+    <div class="categoryHeader d-flex">
+        <div class="text_box">
+            <h2>{{"browse_category" | translate}}</h2>
+        </div>
+        <div class="icon_box end">
+            <ion-icon class="zmdi zmdi-close ion-text-start" (click)="AddClass()"></ion-icon>
+            <ion-icon class="zmdi zmdi-search ion-text-end" (click)="AddClass()"></ion-icon>
+        </div>
+    </div>
+    <div class="category_list">
+        <h2 (click)="AddClass()"><span>Fruits & Vegetables (125)</span></h2>
+        <h2 (click)="AddClass()"><span>Cooking Essentials (86)</span></h2>
+        <h2 (click)="AddClass()"><span>Nut & Dry Fruits (79)</span></h2>
+        <h2 class="active"><span>Dairy Products (79)</span></h2>
+        <h2 (click)="AddClass()"><span>Drinks & Beverages (66)</span></h2>
+        <h2 (click)="AddClass()"><span>Ice Cream Desserts (39)</span></h2>
+        <h2 (click)="AddClass()"><span>Chocolates & Candies (89)</span></h2>
+        <h2 (click)="AddClass()"><span>Meat, Fish & Eggs (56)</span></h2>
+        <h2 (click)="AddClass()"><span>Personal Care (138)</span></h2>
+        <h2 (click)="AddClass()"><span>Health & Hygiene (156)</span></h2>
+        <h2 (click)="AddClass()"><span>Fruits & Vegetables (125)</span></h2>
+        <h2 (click)="AddClass()"><span>Cooking Essentials (86)</span></h2>
+        <h2 (click)="AddClass()"><span>Nut & Dry Fruits (79)</span></h2>
+        <h2 (click)="AddClass()"><span>Dairy Products (79)</span></h2>
+        <h2 (click)="AddClass()"><span>Drinks & Beverages (66)</span></h2>
+        <h2 (click)="AddClass()"><span>Ice Cream Desserts (39)</span></h2>
+        <h2 (click)="AddClass()"><span>Chocolates & Candies (89)</span></h2>
+        <h2 (click)="AddClass()"><span>Meat, Fish & Eggs (56)</span></h2>
+        <h2 (click)="AddClass()"><span>Personal Care (138)</span></h2>
+        <h2 (click)="AddClass()"><span>Health & Hygiene (156)</span></h2>
+    </div>
+</div>
+
+
+<ion-content class="bg_color" fullscreen>
+    <div class="container d-flex">
+        <ion-segment [(ngModel)]="tab" lines="none" mode="ios">
+            <ion-segment-button value="0">
+                <ion-label>
+                    Summer Fruits
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="1">
+                <ion-label>
+                    Fresh Fruits
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="2">
+                <ion-label>
+                    Fresh Vegetables
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="3">
+                <ion-label>
+                    Herbs & Seasoning
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="4">
+                <ion-label>
+                    Organic Fruits
+                </ion-label>
+            </ion-segment-button>
+
+            <ion-segment-button value="5">
+                <ion-label>
+                    Summer Fruits
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="6">
+                <ion-label>
+                    Fresh Fruits
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="7">
+                <ion-label>
+                    Fresh Vegetables
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="8">
+                <ion-label>
+                    Herbs & Seasoning
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="9">
+                <ion-label>
+                    Organic Fruits
+                </ion-label>
+            </ion-segment-button>
+        </ion-segment>
+
+        <div class="tab_content end" [ngSwitch]="tab">
+            <div class="item_list" *ngSwitchCase="'0'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Watermelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items8.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem1 ? 'addItem1 active' : 'addItem1'" (click)="Item1()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items5.png">
+                                <h5>10% off</h5>
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$10.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem2 ? 'addItem2 active' : 'addItem2'" (click)="Item2()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Tender Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items7.png">
+                                <h5>10% off</h5>
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem3 ? 'addItem3 active' : 'addItem3'" (click)="Item3()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Muskmelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items6.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem4 ? 'addItem4 active' : 'addItem4'" (click)="Item4()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem5 ? 'addItem5 active' : 'addItem5'" (click)="Item5()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem6 ? 'addItem6 active' : 'addItem6'" (click)="Item6()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem7 ? 'addItem7 active' : 'addItem7'" (click)="Item7()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem8 ? 'addItem8 active' : 'addItem8'" (click)="Item8()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Watermelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items8.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem9 ? 'addItem9 active' : 'addItem9'" (click)="Item9()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items5.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$10.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem10 ? 'addItem10 active' : 'addItem10'" (click)="Item10()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Tender Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items7.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem11 ? 'addItem11 active' : 'addItem11'" (click)="Item11()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Muskmelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items6.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem12 ? 'addItem12 active' : 'addItem12'" (click)="Item12()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem13 ? 'addItem13 active' : 'addItem13'" (click)="Item13()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem14 ? 'addItem14 active' : 'addItem14'" (click)="Item14()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem15 ? 'addItem15 active' : 'addItem15'" (click)="Item15()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem16 ? 'addItem16 active' : 'addItem16'" (click)="Item16()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+
+            <div class="item_list" *ngSwitchCase="'1'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Watermelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items8.png">
+
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem25 ? 'addItem25 active' : 'addItem25'" (click)="Item25()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items5.png">
+                                <h5>10% off</h5>
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$10.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem26 ? 'addItem26 active' : 'addItem26'" (click)="Item26()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Tender Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items7.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem27 ? 'addItem27 active' : 'addItem27'" (click)="Item27()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Muskmelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items6.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem28 ? 'addItem28 active' : 'addItem28'" (click)="Item28()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item_list" *ngSwitchCase="'2'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem21 ? 'addItem29 active' : 'addItem29'" (click)="Item29()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem22 ? 'addItem32 active' : 'addItem32'" (click)="Item32()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem23 ? 'addItem33 active' : 'addItem33'" (click)="Item33()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem24 ? 'addItem34 active' : 'addItem34'" (click)="Item34()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+
+            <div class="item_list" *ngSwitchCase="'3'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem21 ? 'addItem35 active' : 'addItem35'" (click)="Item35()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem22 ? 'addItem36 active' : 'addItem36'" (click)="Item36()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem37 ? 'addItem37 active' : 'addItem37'" (click)="Item23()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem38 ? 'addItem38 active' : 'addItem38'" (click)="Item38()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+
+            <div class="item_list" *ngSwitchCase="'4'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Watermelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items8.png">
+
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem39 ? 'addItem39 active' : 'addItem39'" (click)="Item39()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items5.png">
+                                <h5>10% off</h5>
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$10.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem40 ? 'addItem40 active' : 'addItem40'" (click)="Item40()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Tender Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items7.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem41 ? 'addItem41 active' : 'addItem41'" (click)="Item41()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Muskmelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items6.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem42 ? 'addItem42 active' : 'addItem42'" (click)="Item42()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item_list" *ngSwitchCase="'5'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem43 ? 'addItem43 active' : 'addItem43'" (click)="Item43()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem44 ? 'addItem44 active' : 'addItem44'" (click)="Item44()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem45 ? 'addItem45 active' : 'addItem45'" (click)="Item45()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem46 ? 'addItem46 active' : 'addItem46'" (click)="Item46()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item_list" *ngSwitchCase="'6'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Watermelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items8.png">
+
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem47 ? 'addItem47 active' : 'addItem47'" (click)="Item47()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items5.png">
+                                <h5>10% off</h5>
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$10.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem18 ? 'addItem48 active' : 'addItem48'" (click)="Item48()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Tender Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items7.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem19 ? 'addItem49 active' : 'addItem49'" (click)="Item49()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Muskmelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items6.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem50 ? 'addItem50 active' : 'addItem50'" (click)="Item50()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item_list" *ngSwitchCase="'7'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem51 ? 'addItem51 active' : 'addItem51'" (click)="Item51()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem22 ? 'addItem60 active' : 'addItem60'" (click)="Item60()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem61 ? 'addItem61 active' : 'addItem61'" (click)="Item61()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem62 ? 'addItem62 active' : 'addItem62'" (click)="Item62()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item_list" *ngSwitchCase="'8'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Watermelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items8.png">
+
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem63 ? 'addItem63 active' : 'addItem63'" (click)="Item63()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items5.png">
+                                <h5>10% off</h5>
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$10.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem64 ? 'addItem64 active' : 'addItem64'" (click)="Item64()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Tender Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items7.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem65 ? 'addItem65 active' : 'addItem65'" (click)="Item65()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Muskmelon</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items6.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$5.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem66 ? 'addItem66 active' : 'addItem66'" (click)="Item66()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="item_list" *ngSwitchCase="'9'">
+                <ion-row>
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Fresh Kiwi</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items3.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>500 gm</h3>
+                                    <h2>$6.00</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem67 ? 'addItem67 active' : 'addItem67'" (click)="Item67()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Jackfruit</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items2.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$4.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem68 ? 'addItem68 active' : 'addItem68'" (click)="Item68()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Green Mango</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items4.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 kg</h3>
+                                    <h2>$5.70</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem69 ? 'addItem69 active' : 'addItem69'" (click)="Item69()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size="6" class="animate__animated animate__zoomIn">
+                        <div class="item">
+                            <div class="itemHeader" (click)="itemInfo()">
+                                <h3 class="d-flex">Coconut</h3>
+                            </div>
+                            <div class="img_box" (click)="itemInfo()">
+                                <img src="assets/images/Gropot/items/items1.png">
+                            </div>
+                            <div class="itemFooter d-flex">
+                                <div class="text_box" (click)="itemInfo()">
+                                    <h3>1 pc</h3>
+                                    <h2>$2.50</h2>
+                                </div>
+                                <div class="addRemoveButton end" [ngClass]="addItem70 ? 'addItem70 active' : 'addItem70'" (click)="Item70()">
+                                    <span>+</span>
+                                    <strong>1</strong>
+                                    <span class="RemoveButton">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border  animate__animated animate__fadeInUp" [ngClass]="showCartButton ? 'showCartButton active' : 'showCartButton'">
+    <div class="view_cart d-flex">
+        <h2>1 {{"items" | translate}} <span></span> $10.00</h2>
+
+        <ion-button size="large" shape="block" class="btn end" (click)="cart()">
+            <ion-icon class="zmdi zmdi-shopping-basket ion-text-start"></ion-icon>
+            {{'view_cart' | translate}}
+        </ion-button>
+    </div>
+</ion-footer>

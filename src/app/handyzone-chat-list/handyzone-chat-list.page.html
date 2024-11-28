@@ -1,0 +1,1407 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-title>{{'chats' | translate}}</ion-title>
+        <!-- <div *ngIf="config.demoMode" (click)="buyappalert()" class="buy_this_app">
+            <h2>
+                {{"buy_this_app" | translate}}
+            </h2>
+        </div> -->
+    </ion-toolbar>
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+        <ion-segment-button mode="ios" value="0">
+            <ion-label class=ion-text-start>
+                {{'live_chat' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="1">
+            <ion-label class=ion-text-start>
+                {{'archive' | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="tab_content">
+        <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Emili Anderson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_1.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Alisha Patel</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_3.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Linda Haydon</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_2.png">
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="item_inner d-flex">
+                            <div class="text_box">
+                                <div class="nameCategory">
+                                    <h2>Peter Johnson</h2>
+                                    <h3 class="d-flex">
+                                        <span class="short_message">No wooies ma'm. I willl do it </span>
+                                        <span class="end">20 min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="img_box end animate__animated animate__fadeInUp">
+                                <img src="assets/images/Handyzone/provider_4.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>
+<!-- <ion-footer class="ion-no-border">
+    <div class="developed_by d-flex" (click)="developed_by()" *ngIf="config.demoMode">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box end">
+            <img src="assets/images/Handyzone/opus.png">
+        </div>
+    </div>
+</ion-footer> -->

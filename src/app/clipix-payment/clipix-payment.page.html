@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'subscribe' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <ion-item>
+            <div class="item_inner">
+                <h2>Starter Pack</h2>
+                <h3 class="d-flex">
+                    3 Month <span class="end">$9.99</span>
+                </h3>
+            </div>
+        </ion-item>
+
+        <div class="payment_option">
+            <h1>{{'how_d_you_like' | translate}}<br>{{'to_pay' | translate}}?</h1>
+
+            <div class="option d-flex" (click)="subscribed()">
+                <img src="assets/images/Clipix/PayPal.png">
+                <h2 class="d-flex">PayPal
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+            </div>
+
+            <div class="option d-flex" (click)="subscribed()">
+                <img src="assets/images/Clipix/PayU_money.png">
+                <h2 class="d-flex">PayU Money
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+            </div>
+
+            <div class="option d-flex" (click)="subscribed()">
+                <img src="assets/images/Clipix/Google_pay.png">
+                <h2 class="d-flex">Google Pay
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+            </div>
+
+            <div class="option d-flex" (click)="subscribed()">
+                <img src="assets/images/Clipix/Credit_card.png">
+                <h2 class="d-flex">Credit Card
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+            </div>
+
+            <div class="option d-flex" (click)="subscribed()">
+                <img src="assets/images/Clipix/stripe.png">
+                <h2 class="d-flex">Stripe
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

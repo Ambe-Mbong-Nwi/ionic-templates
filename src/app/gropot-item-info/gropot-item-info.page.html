@@ -1,0 +1,203 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <span class="end" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'" (click)="addToFavorite()">
+                  <ion-icon class="zmdi zmdi-favorite-outline"></ion-icon>
+                  <ion-icon class="zmdi zmdi-favorite"></ion-icon>
+              </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="item-info">
+        <div class="item_img">
+            <img src="assets/images/Gropot/items/items5.png">
+        </div>
+        <div class="text_box">
+            <h1 class="animate__animated animate__fadeInUp">Mango</h1>
+            <h2 class="animate__animated animate__fadeInUp">Qnt. 5 pcs</h2>
+            <h3 class="d-flex animate__animated animate__fadeInUp">
+                $10.00
+                <div class="addRemoveButton end" [ngClass]="addItem1 ? 'addItem1 active' : 'addItem1'" (click)="Item1()">
+                    <span class="addText">{{"add" | translate}}</span>
+                    <span class="RemoveButton">-</span>
+                    <strong>1</strong>
+                    <span>+</span>
+                </div>
+            </h3>
+
+            <div class="about_product">
+                <h2 class="animate__animated animate__fadeInUp">{{"about_product" | translate}}</h2>
+                <p class="animate__animated animate__fadeInUp">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
+                </p>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp" [ngClass]="showCartButton ? 'showCartButton active' : 'showCartButton'">
+    <h2>{{"similar_products" | translate}}</h2>
+
+    <div class="item_list">
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Watermelon</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items8.png">
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>1 pc</h3>
+                    <h2>$5.00</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem2 ? 'addItem2 active' : 'addItem2'" (click)="Item2()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Tender Coconut</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items7.png">
+                <h5>10% off</h5>
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>1 pc</h3>
+                    <h2>$4.50</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem3 ? 'addItem3 active' : 'addItem3'" (click)="Item3()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Muskmelon</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items6.png">
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>1 pc</h3>
+                    <h2>$5.50</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem4 ? 'addItem4 active' : 'addItem4'" (click)="Item4()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Fresh Kiwi</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items3.png">
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>500 gm</h3>
+                    <h2>$6.00</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem5 ? 'addItem5 active' : 'addItem5'" (click)="Item5()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Jackfruit</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items2.png">
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>1 kg</h3>
+                    <h2>$4.50</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem6 ? 'addItem6 active' : 'addItem6'" (click)="Item6()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Green Mango</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items4.png">
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>1 kg</h3>
+                    <h2>$5.70</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem7 ? 'addItem7 active' : 'addItem7'" (click)="Item7()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemHeader">
+                <h3 class="d-flex">Coconut</h3>
+            </div>
+            <div class="img_box">
+                <img src="assets/images/Gropot/items/items1.png">
+            </div>
+            <div class="itemFooter d-flex">
+                <div class="text_box">
+                    <h3>1 pc</h3>
+                    <h2>$2.50</h2>
+                </div>
+                <div class="addRemoveButton end" [ngClass]="addItem8 ? 'addItem8 active' : 'addItem8'" (click)="Item8()">
+                    <span>+</span>
+                    <strong>1</strong>
+                    <span class="RemoveButton">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="view_cart d-flex">
+        <h2>1 {{"items" | translate}} <span></span> $10.00</h2>
+
+        <ion-button size="large" shape="block" class="btn end" (click)="cart()">
+            <ion-icon class="zmdi zmdi-shopping-basket ion-text-start"></ion-icon>
+            {{'view_cart' | translate}}
+        </ion-button>
+    </div>
+</ion-footer>

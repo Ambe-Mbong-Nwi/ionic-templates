@@ -1,0 +1,637 @@
+<ion-app dir="ltr">
+    <ion-split-pane contentId="main-content">
+        <!--Menu Of Opus UI Kit Start  -->
+        <ion-menu contentId="main-content" type="overlay" class="opus_ui_kit" menuId="zero">
+            <ion-header>
+                <!-- <div class="profile_box">
+                    <img src="assets/images/logo.png">
+                    <h2>{{'app_title' | translate}}</h2>
+                </div>
+                <div *ngIf="config.demoMode" (click)="buyAppAction()" class="buy_this_app">
+                    <h2>
+                        <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div> -->
+
+                <div class="banner">
+                    <div class="banner_img">
+                        <img src="assets/images/banner_img.png">
+                    </div>
+                    <div class="banner_info d-flex">
+                        <h2>Opus Labs UI Kit</h2>
+
+                        <div class="logo end">
+                            <img src="assets/images/logo.png">
+                        </div>
+                    </div>
+                </div>
+            </ion-header>
+            <ion-content>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false" (click)="home()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+                                <h2>{{'home' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" (click)="openSkype()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-skype ion-text-start"></ion-icon>
+                                <h2>{{'skype_us' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" (click)="openInsta()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-instagram ion-text-start"></ion-icon>
+                                <h2>{{'insta_us' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" (click)="openYoutube()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-youtube-play ion-text-start"></ion-icon>
+                                <h2>{{'youtube_us' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" (click)="openFacebook()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-facebook ion-text-start"></ion-icon>
+                                <h2>{{'facebook_us' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <!-- <ion-menu-toggle auto-hide="false" (click)="openWhastapp()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-whatsapp ion-text-start"></ion-icon>
+                                <h2>{{'whats_app_us' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle> -->
+                    <ion-menu-toggle auto-hide="false" (click)="openMail()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                                <h2>{{'mail_us' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" (click)="openWeb ()">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-plus-square ion-text-start"></ion-icon>
+                                <h2>{{'more_products' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+
+            <ion-footer class="ion-no-border">
+                <h2>{{'product_by' | translate}}</h2>
+                <img src="assets/images/opus_labs.png" (click)="openWeb()">
+            </ion-footer>
+        </ion-menu>
+
+        <!--Menu Of Opus UI Kit end  -->
+
+
+        <!--Shophour Menu Start  -->
+        <ion-menu contentId="main-content" type="overlay" class="ShophourMenu" menuId="first">
+            <ion-header class="bg_transparent">
+                <ion-toolbar>
+                    <ion-title>
+                        <div class="title-inner d-flex">
+                            <ion-menu-toggle class="d-flex" auto-hide="false">
+                                <div class="buy_this_app end" *ngIf="config.demoMode" (click)="buyappalert()">
+                                    <h2>
+                                        <!-- <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon> -->
+                                        {{"buy_this_app" | translate}}
+                                    </h2>
+                                </div>
+                            </ion-menu-toggle>
+                        </div>
+                    </ion-title>
+                </ion-toolbar>
+                <div class="profile_box">
+                    <h2>
+                        {{"hey" | translate}},
+                        <span class="first_name">Samantha</span>
+                        <span class="last_name">Smith</span>
+                    </h2>
+                </div>
+            </ion-header>
+            <ion-content fullscreen>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false" *ngFor="let p of ShophourMenu">
+                        <ion-item mode="ios" detail="false" [routerDirection]="'root'" [routerLink]="[p.url]">
+                            <div class="item_inner d-flex">
+                                <ion-icon slot="start" [class]="p.icon"></ion-icon>
+                                <h2>{{ p.title | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <!--Shophour Menu end  -->
+
+
+
+        <!--Menu Of Demo 2  Start  -->
+
+        <!-- <ion-menu contentId="main-content" type="overlay" class="demo_2" menuId="second">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-title>
+                        <ion-menu-toggle auto-hide="false">
+                            <ion-icon class="zmdi zmdi-close"></ion-icon>
+                        </ion-menu-toggle>
+                    </ion-title>
+                </ion-toolbar>
+                <ion-menu-toggle auto-hide="false">
+                    <div class="profile_box d-flex" menuClose>
+                        <div class="profile_img center_img">
+                            <img src="assets/images/my_pic.png" class="crop_img">
+                        </div>
+                        <div class="profile_details">
+                            <h2>Samantha <br> Smith</h2>
+                            <p>View Profile</p>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+            </ion-header>
+            <ion-content>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-pin-assistant ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Nearby Bus Stations</h2>
+                                    <p>View all near us stops in map</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-bus ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Search bus</h2>
+                                    <p>Know where your bus is.</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-notifications-active ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Set Daily Reminders</h2>
+                                    <p>Just set and we'll remind you daily</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-share ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Share App</h2>
+                                    <p>Share App with you friends & family</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-file-text ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Connect us</h2>
+                                    <p>Your words means a lot to us</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-power ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Logout</h2>
+                                    <p>Logout from app</p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+
+            <ion-footer class="ion-no-border">
+                <div *ngIf="config.demoMode" (click)="buyAppAction()" class="buy_this_app">
+                    <h2>
+                        <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div>
+            </ion-footer>
+        </ion-menu> -->
+        <!--Menu Of Demo 2  End  -->
+
+
+
+        <!--Menu Of Demo 3  Start  -->
+
+        <!-- <ion-menu contentId="main-content" type="overlay" class="demo_3" menuId="third">
+            <ion-header>
+                <ion-menu-toggle auto-hide="false">
+                    <div class="profile_box d-flex">
+                        <div class="profile_img center_img">
+                            <img src="assets/images/my_pic.png" class="crop_img">
+                        </div>
+                        <div class="profile_details">
+                            <h2>Sam Smith</h2>
+                            <p>View Profile</p>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+            </ion-header>
+            <ion-content>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item class="active">
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-truck ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>My Orders</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Home</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-assignment ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>My wishlist</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-assignment ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Terms & Conditions</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Need help?</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-thumb-up ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Rate us</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi  zmdi-power-setting ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Logout</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+
+            <ion-footer class="ion-no-border">
+                <div *ngIf="config.demoMode" (click)="buyAppAction()" class="buy_this_app">
+                    <h2>
+                        <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div>
+            </ion-footer>
+        </ion-menu> -->
+
+        <!--Menu Of Demo 3  End  -->
+
+
+
+        <!--Menu Of Demo 4  Start  -->
+
+        <!-- <ion-menu contentId="main-content" type="overlay" class="demo_4" menuId="forth">
+            <ion-header>
+                <ion-menu-toggle auto-hide="false">
+                    <div class="profile_box d-flex">
+                        <div class="profile_img center_img">
+                            <img src="assets/images/my_pic.png" class="crop_img">
+                        </div>
+                        <div class="profile_details">
+                            <h2>Sam Smith</h2>
+                            <p>View Profile</p>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item class="active">
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Sell your car</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+
+                <div class="banner">
+                    <ion-row class="ion-text-center">
+                        <ion-col size="4">
+                            <ion-menu-toggle auto-hide="false">
+                                <img src="assets/images/ic_newcars_active.png">
+                                <h2>New Cars</h2>
+                            </ion-menu-toggle>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-menu-toggle auto-hide="false">
+                                <img src="assets/images/ic_usedcars_active.png">
+                                <h2>Used Cars</h2>
+                            </ion-menu-toggle>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-menu-toggle auto-hide="false">
+                                <img src="assets/images/ic_compare_active.png">
+                                <h2>Compare Cars</h2>
+                            </ion-menu-toggle>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-header>
+            <ion-content>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Home</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-favorite ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Favorites</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-assignment ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Terms & Conditions</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Need help?</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi zmdi-thumb-up ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Rate us</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner">
+                                <ion-icon class="zmdi  zmdi-power-setting ion-text-start"></ion-icon>
+                                <div class="text_box">
+                                    <h2>Logout</h2>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+
+            <ion-footer class="ion-no-border">
+                <div *ngIf="config.demoMode" (click)="buyAppAction()" class="buy_this_app">
+                    <h2>
+                        <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div>
+            </ion-footer>
+        </ion-menu> -->
+
+        <!--Menu Of Demo 4  End  -->
+
+
+
+        <!--Menu Of Demo 5  Start  -->
+        <!-- <ion-menu contentId="main-content" type="overlay" class="demo_5" menuId="five">
+            <ion-header>
+                <div class="profile_box">
+                    <div class="profile_img center_img">
+                        <img src="assets/images/white_logo.png" class="crop_img">
+                    </div>
+                    <div class="profile_details">
+                        <h2>Hey Sam Smith</h2>
+                    </div>
+                </div>
+
+                <div class="menu_tabs">
+                    <ion-row>
+                        <ion-col size="6">
+                            <ion-menu-toggle auto-hide="false">
+                                <p class="d-flex">
+                                    <span class="ion-text-start">
+                                        <img src="assets/images/ic_my_orders-2.png">
+                                    </span> My Order
+                                </p>
+                            </ion-menu-toggle>
+                        </ion-col>
+
+                        <ion-col size="6">
+                            <ion-menu-toggle auto-hide="false">
+                                <p class="d-flex">
+                                    <span class="ion-text-start">
+                                        <img src="assets/images/ic_my_addresses-2.png">
+                                    </span> My Addresses
+                                </p>
+                            </ion-menu-toggle>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-header>
+            <ion-content>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner d-flex">
+                                <div class="img_box">
+                                    <img src="assets/images/ic_home.png ">
+                                </div>
+                                <h2>Home</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner d-flex">
+                                <div class="img_box">
+                                    <img src="assets/images/ic_categories.png ">
+                                </div>
+                                <h2>Shop by categories</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner d-flex">
+                                <div class="img_box">
+                                    <img src="assets/images/ic_my_cart.png ">
+                                </div>
+                                <h2>My Cart</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner d-flex">
+                                <div class="img_box">
+                                    <img src="assets/images/ic_my_account.png ">
+                                </div>
+                                <h2>My Account</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner d-flex">
+                                <div class="img_box">
+                                    <img src="assets/images/ic_help.png ">
+                                </div>
+                                <h2>Help Center</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item>
+                            <div class="item_inner d-flex">
+                                <div class="img_box">
+                                    <img src="assets/images/ic_logout.png ">
+                                </div>
+                                <h2>Logout</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <div *ngIf="config.demoMode" (click)="buyAppAction()" class="buy_this_app">
+                        <h2>
+                            <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+                            {{"buy_this_app" | translate}}
+                        </h2>
+                    </div>
+                </ion-list>
+            </ion-content>
+        </ion-menu> -->
+        <!--Menu Of Demo 5  End  -->
+
+
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+
+    </ion-split-pane>
+
+    <!--GroPot menu start-->
+    <div *ngIf="enableSideMenu" class="GropotMenu sideMenu animate__animated animate__fadeInLeft">
+        <div class="sideMenuInner">
+            <div class="profile_img center_img" (click)="gropotAccount()">
+                <img src="assets/images/Gropot/profile.png" class="crop_img">
+            </div>
+            <div class="MenuButtonContainer">
+                <div class="MenuButton" [ngClass]="activePage == 1 ? 'active' : ''" (click)="gropotHome()">
+                    <h3> {{"home" | translate}}</h3>
+                </div>
+                <div class="MenuButton" [ngClass]="activePage == 2 ? 'active' : ''" (click)="gropotCategories()">
+                    <h3> {{"shop_by_categories" | translate}}</h3>
+                </div>
+                <div class="MenuButton" [ngClass]="activePage == 3 ? 'active' : ''" (click)="gropotFavorite()">
+                    <h3> {{"favorites" | translate}}</h3>
+                </div>
+                <div class="MenuButton" [ngClass]="activePage == 4 ? 'active' : ''" (click)="gropotMyOrders()">
+                    <h3> {{"my_orders" | translate}}</h3>
+                </div>
+                <div class="MenuButton" [ngClass]="activePage == 5 ? 'active' : ''" (click)="gropotSupport()">
+                    <h3> {{"support" | translate}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--GroPot menu start-->
+</ion-app>

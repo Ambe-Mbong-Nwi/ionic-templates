@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="" defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <div class=" ">
+        <div class="logo ion-text-center ">
+            <img src="assets/images/Gopool/logo.png" class="animate__animated animate__zoomInUp">
+        </div>
+
+        <div class="banner animate__animated animate__fadeInUp">
+            <img src="assets/images/Gopool/sign_img.png">
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="form">
+        <h2 class="ion-text-center">{{'sign_in_now' | translate}}</h2>
+
+        <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner">
+                    <ion-label style="margin-bottom: 5px !important;">{{'select_contary' | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select placeholder="{{'select_contary' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}">
+                            <ion-select-option *ngFor="let country of countries" [value]="country.callingCodes[0]">{{country.name}}</ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi  zmdi-chevron-down end ion-text-end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner">
+                    <ion-label style="margin-bottom:5px !important;">{{'phone_number' | translate}}</ion-label>
+                    <ion-input mode="md" type="number" placeholder="{{'enter_mobile_number' | translate}}"></ion-input>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round" (click)="continue()">{{'continue' | translate}}</ion-button>
+    </div>
+
+    <div class="social_login animate__animated animate__fadeInUp">
+        <h3 class="ion-text-center">{{'or_continue_with' | translate}}</h3>
+        <div class="button_container d-flex">
+            <ion-row>
+                <ion-col size="6">
+                    <ion-button size="large" expand="full" class="btn" (click)="continue()">
+                        <ion-icon class="zmdi zmdi-facebook ion-text-start"></ion-icon>&nbsp; {{'facebook' | translate}}
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button size="large" expand="full" class="btn" (click)="continue()">
+                        <ion-icon class="zmdi zmdi-google ion-text-start"></ion-icon>&nbsp;&nbsp; {{'google' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-footer>

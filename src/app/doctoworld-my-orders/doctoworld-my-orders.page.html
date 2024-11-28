@@ -1,0 +1,541 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'my_orders' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <h2>{{'in_process' | translate}}</h2>
+        <ion-item class="in_transist animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'in_transist' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                            <h3 class="d-flex">Xenical 120mg Tablet</h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="confirmed animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Helthy Medicals<span class="end order_status">{{'confirmed' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                            <h3 class="d-flex">Xenical 120mg Tablet</h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <h2>{{'past' | translate}}</h2>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">Salospir 100mg Tablet</h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet</h3>
+                        </div>
+                        <h5 class="end">{{'review_now' | translate}}</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="delivered animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex" (click)="ordersInfo()">
+                <div class="img_box center_img" (click)="ordersInfo()">
+                    <img src="assets/images/Doctoworld/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex" (click)="ordersInfo()">Well Life Store <span class="end order_status">{{'delivered' | translate}}</span></h3>
+                    <h4 class="d-flex" (click)="ordersInfo()">13 June, 11:40 am <span class="end">$18.00 | COD</span></h4>
+                    <div class="item_details d-flex">
+                        <div class="item_list" (click)="ordersInfo()">
+                            <h3 class="d-flex">
+                                Salospir 100mg Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                </span>
+                            </h3>
+                            <h3 class="d-flex">Non Drosy Laritin Tablet
+                                <span class="icon_box end">
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                </span>
+                            </h3>
+                        </div>
+                        <!--                        <h5 class="end" >{{'review_now' | translate}}</h5>-->
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

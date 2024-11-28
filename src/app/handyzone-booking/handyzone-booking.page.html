@@ -1,0 +1,123 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content fullscreen (click)="dismiss()">
+
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-list lines="none">
+        <ion-card>
+            <h2 class="d-flex">{{'select_date' | translate}} <span class="end">June 2020</span></h2>
+            <div class="date_container ion-text-center">
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand1 ? 'active' : '' " (click)="faqExpandToggle1()">
+                    <h2>20</h2>
+                    <h3>Mon</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand2 ? 'active' : '' " (click)="faqExpandToggle2()">
+                    <h2>21</h2>
+                    <h3>Tue</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand3 ? 'active' : '' " (click)="faqExpandToggle3()">
+                    <h2>22</h2>
+                    <h3>Wed</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand4 ? 'active' : '' " (click)="faqExpandToggle4()">
+                    <h2>23</h2>
+                    <h3>Thu</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand5 ? 'active' : '' " (click)="faqExpandToggle5()">
+                    <h2>24</h2>
+                    <h3>Fri</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand6 ? 'active' : '' " (click)="faqExpandToggle6()">
+                    <h2>25</h2>
+                    <h3>Sat</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand7 ? 'active' : '' " (click)="faqExpandToggle7()">
+                    <h2>26</h2>
+                    <h3>Sun</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand8 ? 'active' : '' " (click)="faqExpandToggle8()">
+                    <h2>27</h2>
+                    <h3>Mon</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand9 ? 'active' : '' " (click)="faqExpandToggle9()">
+                    <h2>28</h2>
+                    <h3>Tue</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand10 ? 'active' : '' " (click)="faqExpandToggle10()">
+                    <h2>29</h2>
+                    <h3>Wed</h3>
+                </div>
+                <div class="date animate__animated animate__fadeInUp" [ngClass]="faqExpand11 ? 'active' : '' " (click)="faqExpandToggle11()">
+                    <h2>30</h2>
+                    <h3>Thu</h3>
+                </div>
+            </div>
+        </ion-card>
+
+        <ion-card>
+            <h2>{{'available_times' | translate}}</h2>
+            <ion-radio-group value="biff">
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>09:00 <small>am</small></ion-label>
+                    <ion-radio slot="start" value="1"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>10:00 <small>am</small></ion-label>
+                    <ion-radio slot="start" value="2"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>11:00 <small>am</small></ion-label>
+                    <ion-radio slot="start" value="3"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>12:00 <small>am</small></ion-label>
+                    <ion-radio slot="start" value="4"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>01:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="5"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>02:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="6"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>03:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="7"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>04:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="8"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>05:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="9"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>06:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="10"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>07:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="11"></ion-radio>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <ion-label>08:00 <small>pm</small></ion-label>
+                    <ion-radio slot="start" value="12"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+        </ion-card>
+    </ion-list>
+
+    <div class="btn_box">
+        <ion-button size="large" class="btn" expand="round" (click)="booking_confirmation()">{{'continue' | translate}}</ion-button>
+    </div>
+</ion-footer>

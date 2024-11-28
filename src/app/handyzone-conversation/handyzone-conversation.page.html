@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title> </ion-title>
+    </ion-toolbar>
+    <div class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="banner_bg ion-text-end">
+            <img src="assets/images/Handyzone/header_bg.png">
+        </div>
+
+        <div class="text_box">
+            <h2 class="d-flex">Emili Anderson</h2>
+            <h3>Cleaner</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/Handyzone/provider_1.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="container animate__animated animate__fadeInUp">
+        <div class="chat_container d-flex">
+            <div class="chat_box d-flex animate__animated animate__zoomIn received">
+                <div class="chat">
+                    <h2>Hello ma'm ! <br>How may I help you?</h2>
+                    <p>20 min</p>
+                </div>
+            </div>
+
+            <div class="chat_box d-flex animate__animated animate__zoomIn send">
+                <div class="chat">
+                    <h2>I want to clean my carpet,. <br>Can you wash it?</h2>
+                    <p>20 min</p>
+                </div>
+            </div>
+
+            <div class="chat_box d-flex animate__animated animate__zoomIn received">
+                <div class="chat">
+                    <h2>Sure ma'm !<br>No worries ma'm I will do it</h2>
+                    <p>20 min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="form d-flex animate__animated animate__fadeInUp">
+        <ion-list lines="none d-flex">
+            <ion-item lines="none">
+                <ion-textarea rows="1" auto-grow="true" type="text" placeholder="{{'write_your_meassage' | translate}}"></ion-textarea>
+            </ion-item>
+
+            <div class="attachment_btn end">
+                <ion-icon class="zmdi zmdi-attachment ion-text-end"></ion-icon>
+            </div>
+        </ion-list>
+        &nbsp;&nbsp;
+
+        <div class="send_btn end animate__animated animate__zoomIn">
+            <ion-icon class="zmdi zmdi-mail-send"></ion-icon>
+        </div>
+    </div>
+</ion-footer>

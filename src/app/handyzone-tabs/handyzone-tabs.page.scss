@@ -1,0 +1,70 @@
+div,
+.ios,
+.md {
+    --primary: #69C4FF;
+    --secondary: #93C152;
+    --bg-color: #EBF3F9;
+    --bg-secondary: #F0F7FD;
+    --bg-light: #F8F9FD;
+    --text-light: #A3BCCF;
+    --text-light2: #B3B3B3;
+    --text-dark: #4D4D4D;
+    --text-black: #000;
+    --red-color: #FF0927;
+    --yelow_color: #FFAE22;
+    --white: #fff;
+    --transparent: rgba(0, 0, 0, 0);
+}
+
+ion-tabs {
+    ion-tab-bar {
+        --background: var(--white) !important;
+        box-shadow: 0 4px 41px 10px rgba(0, 0, 0, 0.1);
+        --animate-duration: .4s !important;
+        ion-tab-button {
+            --ripple-color: var(--transparent) !important;
+            position: relative;
+            ion-label {
+                color: var(--text-dark);
+                font-size: 0.65rem;
+                font-weight: 500;
+                letter-spacing: 0;
+            }
+            .img_box {
+                position: relative;
+                margin: 0 auto;
+                width: 27px;
+                height: 27px
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 0;
+                height: auto;
+                transition: all .3s;
+                &.before {
+                    width: 22px;
+                    transition: all .3s;
+                }
+            }
+            &.tab-selected {
+                img {
+                    transition: all .3s;
+                    &.before {
+                        width: 0;
+                        height: 0;
+                        transition: all .3s;
+                    }
+                    &.after {
+                        width: 22px;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+    }
+}

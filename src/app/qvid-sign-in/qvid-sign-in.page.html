@@ -1,0 +1,48 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline" defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <div class="bg_img center_img">
+        <img src="assets/images/Qvid/video_1.png" class="crop_img">
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="form">
+        <h2 class="d-flex"><span>{{'sign_text' | translate}}</span>
+            <ion-icon class="zmdi zmdi-close  end  ion-text-end"></ion-icon>
+        </h2>
+        <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <ion-label mode="md" position="floating">{{"enter_phone_number" | translate}}</ion-label>
+                <ion-input mode="md" type="text" value="+1 987 654 3210"></ion-input>
+            </ion-item>
+
+            <!--
+          <ion-item lines="none">
+              <ion-label mode="md" position="floating">{{"password" | translate}}</ion-label>
+              <ion-input mode="md" class="password" type="password" value="******"></ion-input>
+          </ion-item>
+-->
+        </ion-list>
+
+        <ion-button size="large" expand="block" class="btn animate__animated animate__fadeInUp" (click)="sign_up()">{{'continue' | translate}}</ion-button>
+
+        <div class="social_login ">
+            <h3 class="ion-text-center animate__animated animate__fadeInUp">{{'or_continue_with' | translate}}</h3>
+            <ion-button size="large" expand="block" class="btn fb_btn animate__animated animate__fadeInUp" (click)="social_login()">
+                <img src="assets/images/Qvid/fb.png"> {{'continue_with_facebook' | translate}}
+            </ion-button>
+            <ion-button size="large" expand="block" class="btn google_btn animate__animated animate__fadeInUp" (click)="social_login()">
+                <img src="assets/images/Qvid/google.png"> {{'google_account' | translate}}
+            </ion-button>
+        </div>
+    </div>
+</ion-footer>

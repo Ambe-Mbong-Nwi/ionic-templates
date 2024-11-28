@@ -1,0 +1,43 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'support' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="logo animate__animated animate__zoomIn">
+        <img src="assets/images/Clipix/logo.png">
+    </div>
+    <div class="form animate__animated animate__zoomIn">
+
+        <div class="connect_us">
+            <h2>{{'connect_us' | translate}}</h2>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-button size="large" shape="round" fill="outline" class="btn">
+                        <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                        {{'call_us' | translate}}
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button size="large" shape="round" fill="outline" class="btn">
+                        <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                        {{'mail_us' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <ion-list lines="none">
+            <h2>{{'write_us' | translate}}</h2>
+            <ion-item mode="md" lines="none">
+                <ion-label mode="md" position="floating">{{"write_your_message" | translate}}</ion-label>
+                <ion-textarea rows="4" mode="md" type="name" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <ion-button size="large" shape="round" class="btn">{{'submit' | translate}}</ion-button>
+    </div>
+</ion-content>

@@ -1,0 +1,264 @@
+div,
+.ios,
+.md {
+    --primary: #69C4FF;
+    --secondary: #93C152;
+    --bg-color: #EBF3F9;
+    --bg-secondary: #F0F7FD;
+    --bg-light: #F8F9FD;
+    --text-light: #A3BCCF;
+    --text-light2: #B3B3B3;
+    --text-dark: #4D4D4D;
+    --text-black: #000;
+    --red-color: #FF0927;
+    --yelow_color: #FFAE22;
+    --white: #fff;
+    --transparent: rgba(0, 0, 0, 0);
+}
+
+.button {
+    &.btn {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 3px !important;
+        height: 55px;
+        --background: var(--primary);
+        color: var(--white);
+        margin: 0;
+        --box-shadow: none;
+        text-transform: uppercase !important;
+        ion-icon {
+            font-size: 1.4rem;
+        }
+        &:hover:not(.disable-hover) {
+            --background: var(--primary);
+        }
+        &.button-outline {
+            --background: var(--transparent);
+            color: var(--white);
+            --border-color: var(--primary);
+            --border-width: 1px;
+            &:hover:not(.disable-hover) {
+                --background: var(--transparent);
+            }
+        }
+        &.button-round {
+            --border-radius: 50px !important;
+        }
+        &.button-block {
+            --border-radius: 6px !important;
+        }
+    }
+}
+
+ion-content {
+    --background: #00000000;
+}
+
+ion-footer {
+    border-radius: 18px 18px 0 0;
+    background: var(--white);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+    --animate-duration: .4s !important;
+    ion-list {
+        margin: 0;
+        padding: 0;
+        background: var(--white);
+        padding-bottom: 5px;
+        ion-card {
+            margin: 0;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+            padding-bottom: 25px;
+            h2 {
+                margin: 0;
+                color: var(--text-light2);
+                font-size: 0.93rem;
+                font-weight: 400;
+                padding: 0 20px 16px 20px;
+                letter-spacing: .3px;
+            }
+            .date_container {
+                width: 100%;
+                overflow: hidden;
+                overflow-x: auto;
+                white-space: nowrap;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .date {
+                    display: inline-block;
+                    min-width: 56px;
+                    margin: 0 5px;
+                    position: relative;
+                    overflow: hidden;
+                    background: var(--bg-color);
+                    border-radius: 10px;
+                    padding: 10px 5px;
+                    h2 {
+                        margin: 0;
+                        font-size: 1.4rem;
+                        padding: 0;
+                        position: relative;
+                        z-index: 9;
+                        color: var(--text-dark);
+                        font-weight: 500;
+                        padding-bottom: 5px;
+                    }
+                    h3 {
+                        margin: 0;
+                        color: var(--text-light2);
+                        font-weight: 400;
+                        font-size: 0.8rem;
+                        position: relative;
+                        z-index: 9;
+                    }
+                    &:first-child {
+                        margin-left: 20px;
+                    }
+                    &:last-child {
+                        margin-right: 20px;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 0;
+                        height: 0;
+                        border-radius: 10px;
+                        background: var(--secondary);
+                        transition: all 0.3s;
+                    }
+                    &.active {
+                        &::before {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        h3 {
+                            color: var(--white);
+                        }
+                        h2 {
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+            ion-radio-group {
+                width: 100%;
+                overflow: hidden;
+                overflow-x: scroll;
+                white-space: nowrap;
+                display: block;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                ion-item {
+                    --min-height: 40px;
+                    display: inline-block;
+                    background: var(--bg-color);
+                    border-radius: 10px;
+                    position: relative;
+                    margin: 0 4px;
+                    width: fit-content;
+                    min-width: 105px;
+                    --inner-padding-end: 0px;
+                    --inner-min-height: unset !important;
+                    --padding-start: 0;
+                    --background: var(--transparent) !important;
+                    --ripple-color: var(--transparent) !important;
+                    ion-radio {
+                        position: absolute;
+                        z-index: 999;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        --color: var(--transparent) !important;
+                        --color-checked: var(--transparent) !important;
+                    }
+                    ion-label {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        text-align: center;
+                        margin: 0;
+                        position: relative;
+                        font-weight: 500;
+                        height: 100%;
+                        line-height: 40px;
+                        font-size: 1.15rem;
+                        color: var(--text-dark);
+                        small {
+                            color: var(--text-light2);
+                            font-size: .7rem;
+                            font-weight: 400;
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 0;
+                        height: 0;
+                        transition: all 0.2s;
+                        background: var(--secondary);
+                        border-radius: 10px;
+                    }
+                    &:first-child {
+                        margin-left: 20px;
+                    }
+                    &:last-child {
+                        margin-right: 20px;
+                    }
+                    &.item-radio-checked {
+                        border-color: var(--primary) !important;
+                        &::before {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        ion-label {
+                            color: var(--white) !important;
+                            small {
+                                color: var(--white) !important;
+                            }
+                        }
+                    }
+                }
+            }
+            ion-item {
+                &.item-has-placeholder {
+                    margin-bottom: 12px;
+                    background: var(--bg-color) !important;
+                    width: calc(100% - 39px);
+                    border-radius: 3px;
+                    ion-input {
+                        --placeholder-opacity: 0.6;
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+    .btn_box {
+        padding: 0 20px 0 20px;
+    }
+}

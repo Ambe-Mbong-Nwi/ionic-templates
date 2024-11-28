@@ -1,0 +1,113 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{'account' | translate}}</ion-title>
+    </ion-toolbar>
+    <div class="profile d-flex">
+
+        <div class="img_box center_img">
+            <img src="assets/images/Doctoworld/userprofile.png" class="crop_img">
+        </div>
+        <div class="text_box">
+            <h2>Samantha <br>Smith</h2>
+            <p>+1 987 654 3210</p>
+        </div>
+    </div>
+    <!-- <div *ngIf="config.demoMode" (click)="buyappalert()" class="buy_this_app">
+      <h2> 
+          {{"buy_this_app" | translate}}
+      </h2>
+  </div> -->
+</ion-header>
+
+<ion-content fullscreen class="bg_color">
+    <ion-row>
+        <ion-col size="6" class="animate__animated animate__zoomIn" (click)="wallet()">
+            <div class="menu_box">
+                <h2>{{'wallet' | translate}}</h2>
+                <h3 class="d-flex">{{'quick_payments' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-balance-wallet ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn" (click)="orders()">
+            <div class="menu_box">
+                <h2>{{'my_orders' | translate}}</h2>
+                <h3 class="d-flex">{{'order_status' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-bike ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn" (click)="pillReminders()">
+            <div class="menu_box">
+                <h2>{{'pill_reminders' | translate}}</h2>
+                <h3 class="d-flex">{{'take_pill_on_time' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-notifications-active ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn">
+            <div class="menu_box">
+                <h2>{{'my_address' | translate}}</h2>
+                <h3 class="d-flex">{{'save_address' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-pin ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn">
+            <div class="menu_box">
+                <h2>{{'saved_items' | translate}}</h2>
+                <h3 class="d-flex">{{'mades_doctors' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-bookmark ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn">
+            <div class="menu_box">
+                <h2>{{'contact_us' | translate}}</h2>
+                <h3 class="d-flex">{{'let_us_help_you' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-email ion-text-end end">{{'order_status' | translate}}</ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn">
+            <div class="menu_box">
+                <h2>{{'tc' | translate}}</h2>
+                <h3 class="d-flex">{{'company_policies' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-assignment ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn">
+            <div class="menu_box">
+                <h2>{{'faqs' | translate}}</h2>
+                <h3 class="d-flex"> {{'quick_answers' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-assignment-alert ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn">
+            <div class="menu_box">
+                <h2>{{'language' | translate}}</h2>
+                <h3 class="d-flex"> {{'change_language' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-globe ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+
+        <ion-col size="6" class="animate__animated animate__zoomIn" (click)="logout()">
+            <div class="menu_box">
+                <h2>{{'logout' | translate}}</h2>
+                <h3 class="d-flex">{{'see_again' | translate}}</h3>
+                <ion-icon class="zmdi zmdi-open-in-new ion-text-end end"></ion-icon>
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-content>
+
+<!-- <ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+  <div class="developed_by d-flex" (click)="developed_by()" *ngIf="config.demoMode">
+      <h2>{{"developed_by" | translate}}</h2>
+      <div class="img_box end">
+          <img src="assets/images/Doctoworld/opus_labs.png">
+      </div>
+  </div>
+</ion-footer> -->

@@ -1,0 +1,211 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+
+        <ion-title> {{'booking_id' | translate}} 25141</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <div class="nameCategory">
+                        <h2>Emili Anderson</h2>
+                        <h3>Cleaner</h3>
+                    </div>
+                    <ion-row>
+                        <ion-col size="6">
+                            <h4 class="d-flex">
+                                <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                {{'call_now' | translate}}
+                            </h4>
+                        </ion-col>
+
+                        <ion-col class="message" size="6" (click)="conversation()">
+                            <h4 class="d-flex">
+                                <ion-icon class="zmdi zmdi-comment-alt-text"></ion-icon>
+                                {{'message' | translate}}
+                            </h4>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div class="img_box end">
+                    <img src="assets/images/Handyzone/provider_1.png">
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="booking_status">
+            <h1>{{'booking_status' | translate}}</h1>
+            <ion-item class="active animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="text_box">
+                        <h2>{{'booking_request_sent' | translate}}</h2>
+                        <h3>{{'requested_on' | translate}} <strong>19 Jun, 09:00 am</strong></h3>
+                    </div>
+
+                    <div class="img_box end">
+                        <img src="assets/images/Handyzone/ic_Booking_Request_sent.png">
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="text_box">
+                        <h2>{{'booking_confirmed' | translate}}</h2>
+                        <h3>{{'usually_confirms_in_24_hour' | translate}}
+                            <!--                            <strong>19 Jun, 09:00 am</strong>-->
+                        </h3>
+                    </div>
+
+                    <div class="img_box end">
+                        <img src="assets/images/Handyzone/ic_Booking_Confirmed.png" style="max-width: 79px;">
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="text_box">
+                        <h2>{{'start_a_job' | translate}}</h2>
+                        <h3>{{'schedule_on' | translate}} <strong>21 Jun, 10:00 am</strong></h3>
+                    </div>
+
+                    <div class="img_box end">
+                        <img src="assets/images/Handyzone/ic_Started_a_Job.png" style="max-width: 90px;     top: 10px;">
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-check-circle"></ion-icon>
+                    </div>
+
+                    <div class="text_box">
+                        <h2>{{'job_completed' | translate}}</h2>
+                        <!--                        <h3>{{'amount_to_pay' | translate}} <span>$24.00</span></h3>-->
+                        <h3>{{'payment_info_will_appear_hear' | translate}}. </h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/Handyzone/ic_Job_Completed.png" style="max-width: 87px;     top: 10px;">
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>
+
+<div class="pooler_info" #contentElement id="content-inner">
+    <ion-toolbar (click)="closeContainer()"> </ion-toolbar>
+    <ion-list lines="none">
+        <ion-item class="booking_for">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/Handyzone/ic_carpet.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>Carpet Shampooing</h2>
+                    <h3 class="d-flex">
+                        <img src="assets/images/Handyzone/ic_appointmentsact.png" class="crop_img">&nbsp; 21 June, 2020 <small></small> 10:00 am
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item>
+            <div class="item_inner">
+                <h2>{{'task' | translate}}</h2>
+                <h3>Home Clean > Carpet Cleaning</h3>
+            </div>
+        </ion-item>
+
+
+        <ion-item>
+            <div class="item_inner">
+                <h2>{{'address' | translate}}</h2>
+                <h3>Home</h3>
+                <p>B121 - Galaxy Residency, Hemiltone Tower, <br>New York, UAS.</p>
+            </div>
+        </ion-item>
+
+        <ion-item>
+            <div class="item_inner">
+                <h2>{{'description' | translate}}</h2>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
+
+                <div class="scroll-x">
+                    <div class="img_box center_img">
+                        <img src="assets/images/Handyzone/pic1.jpg" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/Handyzone/pic2.jpg" class="crop_img">
+                    </div>
+
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</div>
+
+<ion-footer class="ion-no-border">
+    <div class="footer_btn">
+        <h2 class="d-flex">{{'amount_to_pay' | translate}} <span class="end">$12.00<small>/hr</small></span></h2>
+        <!--
+      <h2 class="d-flex">{{'proceed_to_pay' | translate}}
+          <span class="end">
+              $24.00
+              <ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+          </span>
+      </h2>
+-->
+
+        <!--
+      <h2 class="d-flex">{{'work_ratings' | translate}}
+          <span class="end">
+              <ion-icon class="zmdi zmdi-star active"></ion-icon>
+              <ion-icon class="zmdi zmdi-star active"></ion-icon>
+              <ion-icon class="zmdi zmdi-star active"></ion-icon>
+              <ion-icon class="zmdi zmdi-star active"></ion-icon>
+              <ion-icon class="zmdi zmdi-star "></ion-icon>
+
+              <ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+          </span>
+      </h2>
+-->
+    </div>
+</ion-footer>
